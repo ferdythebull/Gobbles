@@ -40,3 +40,5 @@ gem 'spring',        group: :development
 gem 'paperclip'
 gem 'haml'
 gem 'twitter-bootstrap-rails'
+gem "therubyracer"
+gem "less-rails"
