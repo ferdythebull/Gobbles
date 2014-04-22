@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   member do
     get :admin
   end
+    resources :carts do 
+    end
     resources :products do
     end
   end

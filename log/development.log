@@ -148,6 +148,17 @@ ActiveRecord::NoDatabaseError (Unknown database 'store/development'Run `$ bin/ra
   Rendered /Users/genenettles/.rvm/gems/ruby-2.1.1@gobbles/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
   Rendered /Users/genenettles/.rvm/gems/ruby-2.1.1@gobbles/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
   Rendered /Users/genenettles/.rvm/gems/ruby-2.1.1@gobbles/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.0ms)
+<<<<<<< HEAD
+  [1m[36m (11.3ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (11.9ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateProducts (20140422192915)
+  [1m[35m (7.4ms)[0m  CREATE TABLE `products` (`id` int(11) auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140422192915')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+=======
 
 
 Started GET "/" for 127.0.0.1 at 2014-04-22 15:42:03 -0400
@@ -374,6 +385,7 @@ Processing by StoresController#index as HTML
   [1m[36mStore Load (0.8ms)[0m  [1mSELECT `stores`.* FROM `stores`[0m
   Rendered stores/index.html.haml within layouts/application (4.2ms)
 Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.8ms)
+<<<<<<< HEAD
 
 
 Started GET "/stores" for 127.0.0.1 at 2014-04-22 16:15:19 -0400
@@ -698,3 +710,41 @@ ActiveRecord::RecordNotFound (Couldn't find Store with 'id'=admin):
   Rendered /Users/genenettles/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
   Rendered /Users/genenettles/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
   Rendered /Users/genenettles/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.7ms)
+=======
+>>>>>>> upstream/master
+  [1m[36m (9.3ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (9.6ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateProducts (20140422192915)
+  [1m[35m (6.7ms)[0m  CREATE TABLE `products` (`id` int(11) auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140422192915')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateStores (20140422193723)
+  [1m[35m (7.0ms)[0m  CREATE TABLE `stores` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `location` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140422193723')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateCarts (20140422193038)
+  [1m[35m (7.8ms)[0m  CREATE TABLE `carts` (`id` int(11) auto_increment PRIMARY KEY, `product_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140422193038')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddFieldsToProducts (20140422203711)
+  [1m[35m (17.9ms)[0m  ALTER TABLE `products` ADD `name` varchar(255)
+  [1m[36m (10.6ms)[0m  [1mALTER TABLE `products` ADD `image` varchar(255)[0m
+  [1m[35m (11.6ms)[0m  ALTER TABLE `products` ADD `description` varchar(255)
+  [1m[36m (12.4ms)[0m  [1mALTER TABLE `products` ADD `price` varchar(255)[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20140422203711')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+>>>>>>> upstream/master
