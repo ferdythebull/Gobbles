@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :stores
+
   root 'home#index'
   resources :stores do
     resources :carts do 
