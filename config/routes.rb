@@ -3,7 +3,10 @@ Rails.application.routes.draw do
 
   root 'home#index'
   resources :stores do
-    resources :dresses do
+  member do
+    get :admin
+  end
+    resources :products do
     end
   end
 
