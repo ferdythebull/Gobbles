@@ -1,0 +1,17 @@
+%h1 Listing stores
+%table
+  %thead
+    %tr
+      %th Name
+      %th Location
+      %th{colspan: "3"}
+  %tbody
+    - @stores.each do |store|
+      %tr
+        %td= store.name
+        %td= store.location
+        %td= link_to 'Show', store
+        %td= link_to 'Edit', edit_store_path(store)
+        %td= link_to 'Delete', store, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Store', new_store_path
