@@ -1,7 +1,6 @@
 class Product < ActiveRecord::Base
   belongs_to :store
 
-  def products
-  end
+  validates :name, presence: true, length: {minimum: 5}
 
 end
