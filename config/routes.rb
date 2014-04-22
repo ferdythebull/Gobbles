@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root 'home#index'
   resources :stores do
-    resources :dresses do
+    resources :carts do 
+    end
+    resources :product do
     end
   end
 
