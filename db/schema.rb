@@ -13,6 +13,12 @@
 
 ActiveRecord::Schema.define(version: 20140422193723) do
 
+  create_table "carts", force: true do |t|
+    t.integer  "product_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "stores", force: true do |t|
     t.string   "name"
     t.string   "location"
