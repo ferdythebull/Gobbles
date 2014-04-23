@@ -1,7 +1,7 @@
 %h1 List of Stores
 = link_to "Create Store", new_store_path
 %br
-- @stores.each do |pub|
+- @stores.each do |store|
   = link_to store.name, store_path(store)
   %br
   = store.name
