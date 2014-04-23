@@ -17,9 +17,13 @@ class CartsController < ApplicationController
   end
 
   def update
+    @cart.update_attributes cart_params
+    redirect_to store_path(@store)
   end
 
   def destroy
+    @cart.delete
+    redirect_to store_path(@store)
   end
 private
   def find_store
