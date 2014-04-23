@@ -7,5 +7,24 @@
   = @store.location
 = link_to 'Edit', edit_store_path(@store)
 |
-\#{link_to 'Back', stores_path}
+#{link_to 'Back', stores_path}
+%hr
 = link_to 'Create Product', new_store_product_path(@store)
+%br
+- @products.each do |product|
+  %br
+  %strong Name: 
+  = product.name
+  %br
+  %strong Image: 
+  = product.image
+  %br
+  %strong Description: 
+  = product.description
+  %br
+  %strong Price: 
+  = product.price
+  %br
+  / = link_to "Edit", edit_store_product_path(store)
+  / / |
+  / / = link_to "Delete", store_path(store), method: :delete
