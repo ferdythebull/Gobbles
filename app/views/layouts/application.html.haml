@@ -28,4 +28,158 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
   %body.body-blue
-    = yield
+  / Extra Bar
+.mini-navbar.mini-navbar-white.hidden-xs
+  .container
+    .col-sm-12
+      %a.first-child{href: "#"}
+        %i.fa.fa-envelope
+        Email
+        %span.hidden-sm : contact@example.com
+      %span.phone
+        %i.fa.fa-phone-square
+        Phone: 843-123-4567
+      %a.pull-right{href: "sign-up.html"}
+        %i.fa.fa-arrow-circle-down
+        Sign Up
+      %a.pull-right{href: "sign-in.html"}
+        %i.fa.fa-sign-in
+        Sign In
+      %a#nav-search.pull-right{href: "#"}
+        %i.fa.fa-search
+        Search
+      %a#nav-search-close.pull-right.hidden{href: "#"}
+        %i.fa.fa-times
+      / Search Form
+      %form#nav-search-form.pull-right.hidden{role: "search"}
+        .input-group
+          %input.form-control{placeholder: "Search", type: "text"}/
+          %span.input-group-btn
+            %button.btn.btn-default{type: "submit"}
+              %i.fa.fa-search
+.navbar.navbar-white.navbar-static-top{role: "navigation"}
+  .container
+    / Navbar Header
+    .navbar-header
+      %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", type: "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand{href: "index.html"}
+        %i.fa.fa-th-large
+        Team Gobbles
+        %span.hidden-sm Shopping
+    / / Navbar Header
+    / Navbar Links
+    .navbar-collapse.collapse
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          %a.bg-hover-color{href: "index.html"} Home
+        %li.dropdown.active
+          %a.dropdown-toggle.bg-hover-color{"data-toggle" => "dropdown", href: "#"}
+            Shop
+            %b.caret
+          %ul.dropdown-menu
+            %li
+              %a.bg-hover-color{href: "shop-products.html"} Shop Products
+            %li
+              %a.bg-hover-color{href: "shop-item.html"} Shop Item
+            %li
+              %a.bg-hover-color{href: "shop-cart.html"} Shopping Cart
+            %li
+              %a.bg-hover-color{href: "user-profile.html"} User Profile
+      / Search Form (xs)
+      %form.navbar-form.navbar-left.visible-xs{role: "search"}
+        .form-group
+          %input.form-control{placeholder: "Search", type: "text"}/
+        %button.btn.btn-default{type: "submit"} Go!
+      / / Search Form (xs)
+    / / Navbar Links
+  / / container
+/ / navbar
+= yield
+/ Footer
+%footer.footer-white
+  .container
+    .row
+      / Contact Us
+      .col-sm-4
+        %h3.text-color
+          %span.border-color Contact Us
+        .content
+          %p
+            The Iron Yard - Charleston
+            %br/
+            Mount Pleasant, SC 29464
+            %br/
+            510 Mill Street
+            %br/
+            Phone: 843-123-4567
+            %br/
+            Email:
+            %a{href: "#"} admin@mysite.com
+      / Social icons
+      .col-sm-4
+        %h3.text-color
+          %span Go Social
+        .content.social
+          %p Stay in touch with us:
+          %ul.list-inline
+            %li
+              %a.twitter{href: "#"}
+                %i.fa.fa-twitter
+            %li
+              %a.facebook{href: "#"}
+                %i.fa.fa-facebook
+            %li
+              %a.pinterest{href: "#"}
+                %i.fa.fa-pinterest
+            %li
+              %a.github{href: "#"}
+                %i.fa.fa-github
+            %li
+              %a.linkedin{href: "#"}
+                %i.fa.fa-linkedin
+            %li
+              %a.vk{href: "#"}
+                %i.fa.fa-vk
+            %li
+              %a.plus{href: "#"}
+                %i.fa.fa-google-plus
+          .clearfix
+      / Subscribe
+      .col-sm-4
+        %h3.text-color
+          %span Subscribe
+        .content
+          %p
+            Enter your e-mail below to subscribe to our free newsletter.
+            %br>/
+            We promise not to bother you often!
+          %form.form{role: "form"}
+            .row
+              .col-sm-8
+                .input-group
+                  %label.sr-only{for: "subscribe-email"} Email address
+                  %input#subscribe-email.form-control{placeholder: "Enter email", type: "email"}/
+                  %span.input-group-btn
+                    %button.btn.btn-default{type: "submit"} OK
+    .row
+      .col-sm-12
+        %hr/
+    / Copyrights
+    .row
+      .col-sm-12
+        %p
+          \© Team Gobbles 2014.
+          %a{href: "#"} Privacy Policy
+          |
+          %a{href: "#"} Terms of Service
+
+/ Placed at the end of the document so the pages load faster
+%script{src: "https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"}
+%script{src: "assets/bootstrap.min.js"}
+%script{src: "assets/scrolltopcontrol.js"}
+%script{src: "assets/jquery.sticky.js"}
+%script{src: "assets/custom.js"}
