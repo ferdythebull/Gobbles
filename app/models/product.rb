@@ -1,6 +1,5 @@
 class Product < ActiveRecord::Base
-  belongs_to :store
-  belongs_to :cart
+  has_many :stores, through: :carts
   validates :name, presence: true, length: {minimum: 5}
 
 end 
