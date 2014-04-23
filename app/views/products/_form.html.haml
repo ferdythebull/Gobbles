@@ -1,5 +1,5 @@
-= form_for @product do |f|
-  = render 'layouts/error_messages', object: @product
+= form_for [@store, @product] do |f|
+  / = render 'layouts/error_messages', object: @product
   %br
   = f.label :image
   = f.text_field :image
