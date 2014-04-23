@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20140423174809) do
-=======
-ActiveRecord::Schema.define(version: 20140423163910) do
->>>>>>> upstream/master
 
   create_table "carts", force: true do |t|
     t.integer  "product_id"
@@ -36,7 +32,6 @@ ActiveRecord::Schema.define(version: 20140423163910) do
   create_table "stores", force: true do |t|
     t.string   "name"
     t.string   "location"
-<<<<<<< HEAD
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -52,8 +47,6 @@ ActiveRecord::Schema.define(version: 20140423163910) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-=======
->>>>>>> upstream/master
     t.datetime "created_at"
     t.datetime "updated_at"
   end
