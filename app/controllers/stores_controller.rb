@@ -1,5 +1,5 @@
 class StoresController < ApplicationController
-  before_action :set_store, only: [:show, :edit, :update, :destroy]
+  before_action :set_store, only: [:show, :edit, :update, :destroy, :admin]
 
   # GET /stores
   # GET /stores.json
@@ -59,6 +59,11 @@ class StoresController < ApplicationController
       format.html { redirect_to stores_url }
       format.json { head :no_content }
     end
+  end
+
+  def admin
+    @stores = Store.all
+    redirect_to admin_store_path(@store)
   end
 
   private
