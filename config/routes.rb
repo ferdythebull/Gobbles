@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :stores
 
   root 'home#index'
+  get 'admin' => 'home#admin'
   resources :stores do
   member do
     get :admin

@@ -1,5 +1,5 @@
 / Extra Bar
-.mini-navbar.mini-navbar-dark.hidden-xs
+.mini-navbar.mini-navbar-white.hidden-xs
   .container
     .col-sm-12
       %a.first-child{href: "#"}
@@ -27,7 +27,7 @@
           %span.input-group-btn
             %button.btn.btn-default{type: "submit"}
               %i.fa.fa-search
-.navbar.navbar-dark.navbar-static-top{role: "navigation"}
+.navbar.navbar-white.navbar-static-top{role: "navigation"}
   .container
     / Navbar Header
     .navbar-header
@@ -46,66 +46,11 @@
       %ul.nav.navbar-nav.navbar-right
         %li
           %a.bg-hover-color{href: "index.html"} Home
-        %li.dropdown
-          %a.dropdown-toggle.bg-hover-color{"data-toggle" => "dropdown", href: "#"}
-            Pages
-            %b.caret
-          %ul.dropdown-menu
-            %li
-              %a.bg-hover-color{href: "about-us.html"} About Us
-            %li
-              %a.bg-hover-color{href: "coming-soon.html"} Coming Soon
-            %li
-              %a.bg-hover-color{href: "contact-us.html"} Contact Us
-            %li
-              %a.bg-hover-color{href: "dummy.html"} Dummy Page
-            %li
-              %a.bg-hover-color{href: "help-center.html"} Help Center
-            %li
-              %a.bg-hover-color{href: "help-answer.html"} Help Item
-            %li
-              %a.bg-hover-color{href: "pricing-table.html"} Pricing Table
-            %li
-              %a.bg-hover-color{href: "responsive-video.html"} Responsive Video
-            %li
-              %a.bg-hover-color{href: "services.html"} Services
-            %li
-              %a.bg-hover-color{href: "sign-in.html"} Sign In
-            %li
-              %a.bg-hover-color{href: "sign-in-alt.html"} Sign In Option
-            %li
-              %a.bg-hover-color{href: "sign-up.html"} Sign Up
-            %li
-              %a.bg-hover-color{href: "sign-up-alt.html"} Sign Up Option
-            %li
-              %a.bg-hover-color{href: "404-error.html"} 404 Error Page
-        %li.dropdown
-          %a.dropdown-toggle.bg-hover-color{"data-toggle" => "dropdown", href: "#"}
-            Portfolio
-            %b.caret
-          %ul.dropdown-menu
-            %li
-              %a.bg-hover-color{href: "portfolio.html"} Portfolio
-            %li
-              %a.bg-hover-color{href: "portfolio-isotope.html"} Portfolio Isotope
-            %li
-              %a.bg-hover-color{href: "portfolio-item.html"} Portfolio Item
-        %li.dropdown
-          %a.dropdown-toggle.bg-hover-color{"data-toggle" => "dropdown", href: "#"}
-            Blog
-            %b.caret
-          %ul.dropdown-menu
-            %li
-              %a.bg-hover-color{href: "blog.html"} Blog
-            %li
-              %a.bg-hover-color{href: "blog-post.html"} Blog Post
         %li.dropdown.active
           %a.dropdown-toggle.bg-hover-color{"data-toggle" => "dropdown", href: "#"}
             Shop
             %b.caret
           %ul.dropdown-menu
-            %li
-              %a.bg-hover-color{href: "shop.html"} Shop Index
             %li
               %a.bg-hover-color{href: "shop-products.html"} Shop Products
             %li
@@ -114,21 +59,6 @@
               %a.bg-hover-color{href: "shop-cart.html"} Shopping Cart
             %li
               %a.bg-hover-color{href: "user-profile.html"} User Profile
-        %li.dropdown
-          %a.dropdown-toggle.bg-hover-color{"data-toggle" => "dropdown", href: "#"}
-            UI Elements
-            %b.caret
-          %ul.dropdown-menu
-            %li
-              %a.bg-hover-color{href: "ui-elements.html#buttons"} Buttons
-            %li
-              %a.bg-hover-color{href: "ui-elements.html#panels"} Panels
-            %li
-              %a.bg-hover-color{href: "ui-elements.html#info-boards"} Info Boards
-            %li
-              %a.bg-hover-color{href: "ui-elements.html#navs"} Navs
-            %li
-              %a.bg-hover-color{href: "ui-elements.html#headlines"} Headlines
       / Search Form (xs)
       %form.navbar-form.navbar-left.visible-xs{role: "search"}
         .form-group
@@ -161,7 +91,7 @@
     / Intro
     .row.intro
       .col-sm-10
-        %h2.text-color An Ecommerce rails application!
+        %h2.text-color An Ecommerce Rails Application!
         %p.text-muted Team Gobbles was created to show our skills of ... The purpose of this exercise was to ... Check out our work and we hope you have a great user experience!
       .col-sm-2
         %a.btn.btn-color.btn-lg{href: "#"} Browse Now!
@@ -176,7 +106,7 @@
       .col-sm-3
         .shop-product
           %a{href: "shop-item.html"}
-            %img.img-responsive{alt: "...", src: "/images/product-1.jpg"}/
+            %img.img-responsive{alt: "...", src: "/assets/product-1.jpg"}/
           %a{href: "shop-item.html"}
             %h5.primary-font Product #1
           %p.text-muted
@@ -189,7 +119,7 @@
       .col-sm-3
         .shop-product
           %a{href: "shop-item.html"}
-            %img.img-responsive{alt: "...", src: "images/product-2.jpg"}/
+            %img.img-responsive{alt: "...", src: "assets/product-2.jpg"}/
           %a{href: "shop-item.html"}
             %h5.primary-font Product #2
           %p.text-muted
@@ -202,7 +132,7 @@
       .col-sm-3
         .shop-product
           %a{href: "shop-item.html"}
-            %img.img-responsive{alt: "...", src: "images/product-3.jpg"}/
+            %img.img-responsive{alt: "...", src: "assets/product-3.jpg"}/
           %a{href: "shop-item.html"}
             %h5.primary-font Product #3
           %p.text-muted
@@ -215,7 +145,7 @@
       .col-sm-3
         .shop-product
           %a{href: "shop-item.html"}
-            %img.img-responsive{alt: "...", src: "images/product-1.jpg"}/
+            %img.img-responsive{alt: "...", src: "assets/product-1.jpg"}/
           %a{href: "shop-item.html"}
             %h5.primary-font Product #4
           %p.text-muted
@@ -235,7 +165,7 @@
       .col-sm-4
         .shop-product.featured
           %a{href: "shop-item.html"}
-            %img.img-responsive{alt: "...", src: "images/product-1.jpg"}/
+            %img.img-responsive{alt: "...", src: "assets/product-1.jpg"}/
           %a{href: "shop-item.html"}
             %h5.primary-font Product #1
           %p.text-muted
@@ -249,7 +179,7 @@
       .col-sm-4
         .shop-product.featured
           %a{href: "shop-item.html"}
-            %img.img-responsive{alt: "...", src: "images/product-2.jpg"}/
+            %img.img-responsive{alt: "...", src: "assets/product-2.jpg"}/
           %a{href: "shop-item.html"}
             %h5.primary-font Product #2
           %p.text-muted
@@ -263,7 +193,7 @@
       .col-sm-4
         .shop-product.featured
           %a{href: "shop-item.html"}
-            %img.img-responsive{alt: "...", src: "images/product-3.jpg"}/
+            %img.img-responsive{alt: "...", src: "assets/product-3.jpg"}/
           %a{href: "shop-item.html"}
             %h5.primary-font Product #3
           %p.text-muted
@@ -279,7 +209,7 @@
   / / .container
 / / .wrapper
 / Footer
-%footer.footer-dark
+%footer.footer-white
   .container
     .row
       / Contact Us
@@ -355,56 +285,10 @@
           %a{href: "#"} Privacy Policy
           |
           %a{href: "#"} Terms of Service
-/ Style Toggle
-.style-toggle.text-left.hidden-xs
-  %i.fa.fa-gears.style-toggle-btn
-  .style-toggle-header.text-center
-    Navbar Type
-  / Navbar Type
-  .style-toggle-body.text-left
-    .radio
-      %label
-        %input#opt-navbar-dark{checked: "checked", name: "navbar", type: "radio", value: "opt-navbar-dark"}/
-        Navbar Dark (default)
-    .radio
-      %label
-        %input#opt-navbar-white{name: "navbar", type: "radio", value: "opt-navbar-white"}/
-        Navbar White
-    .radio
-      %label
-        %input#opt-navbar-mixed{name: "navbar", type: "radio", value: "opt-navbar-mixed"}/
-        Navbar Mixed
-  / Color Styles
-  .style-toggle-header.text-center
-    Color Styles
-  .style-toggle-body.text-center
-    %ul.colors.list-inline
-      %li.green
-      %li.blue
-      %li.orange
-      %li.red
-  / Footer Type
-  .style-toggle-header.text-center
-    Footer Type
-  .style-toggle-body.text-left
-    .radio
-      %label
-        %input#opt-footer-dark{checked: "checked", name: "footer", type: "radio", value: "opt-footer-dark"}/
-        Footer Dark (default)
-    .radio
-      %label
-        %input#opt-footer-white{name: "footer", type: "radio", value: "opt-footer-white"}/
-        Footer White
-    %hr/
-    %a{href: "theme-faq.html"}
-      %i.fa.fa-question-circle
-      Using color schemes on a production site.
-/
-  Bootstrap core JavaScript
-  \==================================================
+
 / Placed at the end of the document so the pages load faster
 %script{src: "https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"}
-%script{src: "js/bootstrap.min.js"}
-%script{src: "js/scrolltopcontrol.js"}
-%script{src: "js/jquery.sticky.js"}
-%script{src: "js/custom.js"}
+%script{src: "assets/bootstrap.min.js"}
+%script{src: "assets/scrolltopcontrol.js"}
+%script{src: "assets/jquery.sticky.js"}
+%script{src: "assets/custom.js"}
