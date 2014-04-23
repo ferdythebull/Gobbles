@@ -1,0 +1,14 @@
+%h1 List of Stores
+= link_to "Create Store", new_store_path
+%br
+- @stores.each do |store|
+  = link_to store.name, store_path(store)
+  %br
+  = store.name
+  %br
+  = store.location
+  %br
+  = link_to "Edit", edit_store_path(store)
+  |
+  = link_to "Delete", store_path(store), method: :delete
+  %hr
