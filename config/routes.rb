@@ -10,8 +10,8 @@ Rails.application.routes.draw do
   end
     resources :carts do 
     end
-    resources :products do
-    end
+  resources :products do
+  end
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
