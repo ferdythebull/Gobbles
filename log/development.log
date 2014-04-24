@@ -48727,3 +48727,176 @@ ActionController::RoutingError (No route matches [GET] "/img/close.png"):
   Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.8ms)
   Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (55.0ms)
 >>>>>>> upstream/master
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to ChangeCartTable (20140424175307)
+  [1m[35m (0.3ms)[0m  ALTER TABLE `carts` ADD `user_id` int(11)
+Mysql2::Error: Duplicate column name 'user_id': ALTER TABLE `carts` ADD `user_id` int(11)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to ChangeCartTable (20140424175307)
+  [1m[35m (0.3ms)[0m  ALTER TABLE `carts` ADD `user_id` int(11)
+Mysql2::Error: Duplicate column name 'user_id': ALTER TABLE `carts` ADD `user_id` int(11)
+  [1m[36m (8.3ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (11.7ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateProducts (20140422192915)
+  [1m[35m (29.2ms)[0m  CREATE TABLE `products` (`id` int(11) auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140422192915')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCarts (20140422193038)
+  [1m[35m (7.4ms)[0m  CREATE TABLE `carts` (`id` int(11) auto_increment PRIMARY KEY, `product_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140422193038')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Migrating to CreateStores (20140422193723)
+  [1m[35m (29.8ms)[0m  CREATE TABLE `stores` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `location` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140422193723')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to AddFieldsToProducts (20140422203711)
+  [1m[35m (33.6ms)[0m  ALTER TABLE `products` ADD `name` varchar(255)
+  [1m[36m (11.2ms)[0m  [1mALTER TABLE `products` ADD `image` varchar(255)[0m
+  [1m[35m (13.3ms)[0m  ALTER TABLE `products` ADD `description` varchar(255)
+  [1m[36m (11.1ms)[0m  [1mALTER TABLE `products` ADD `price` varchar(255)[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20140422203711')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to AddFieldsToCarts (20140423163910)
+  [1m[36m (35.5ms)[0m  [1mALTER TABLE `carts` ADD `store_id` int(11)[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20140423163910')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Migrating to DeviseCreateUsers (20140423174809)
+  [1m[36m (30.4ms)[0m  [1mCREATE TABLE `users` (`id` int(11) auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (11.2ms)[0m  CREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) 
+  [1m[36m (8.0ms)[0m  [1mCREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) [0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20140423174809')[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+Migrating to CreateCheckouts (20140423200920)
+  [1m[36m (8.2ms)[0m  [1mCREATE TABLE `checkouts` (`id` int(11) auto_increment PRIMARY KEY, `product_id` int(11), `store_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20140423200920')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Migrating to RemoveStoreIdColumn (20140424174201)
+  [1m[36m (10.8ms)[0m  [1mALTER TABLE `carts` DROP `store_id`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20140424174201')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to AddColumnToCarts (20140424174657)
+  [1m[36m (10.2ms)[0m  [1mALTER TABLE `carts` ADD `user_id` int(11)[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20140424174657')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to ChangeCartTable (20140424175307)
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE `carts` ADD `user_id` int(11)[0m
+Mysql2::Error: Duplicate column name 'user_id': ALTER TABLE `carts` ADD `user_id` int(11)
+  [1m[36m (7.9ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (11.3ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateProducts (20140422192915)
+  [1m[35m (7.9ms)[0m  CREATE TABLE `products` (`id` int(11) auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140422192915')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCarts (20140422193038)
+  [1m[35m (7.6ms)[0m  CREATE TABLE `carts` (`id` int(11) auto_increment PRIMARY KEY, `product_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140422193038')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateStores (20140422193723)
+  [1m[35m (7.7ms)[0m  CREATE TABLE `stores` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `location` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140422193723')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to AddFieldsToProducts (20140422203711)
+  [1m[35m (10.4ms)[0m  ALTER TABLE `products` ADD `name` varchar(255)
+  [1m[36m (14.2ms)[0m  [1mALTER TABLE `products` ADD `image` varchar(255)[0m
+  [1m[35m (10.1ms)[0m  ALTER TABLE `products` ADD `description` varchar(255)
+  [1m[36m (10.9ms)[0m  [1mALTER TABLE `products` ADD `price` varchar(255)[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20140422203711')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to AddFieldsToCarts (20140423163910)
+  [1m[36m (12.3ms)[0m  [1mALTER TABLE `carts` ADD `store_id` int(11)[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20140423163910')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to DeviseCreateUsers (20140423174809)
+  [1m[36m (6.9ms)[0m  [1mCREATE TABLE `users` (`id` int(11) auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (8.6ms)[0m  CREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) 
+  [1m[36m (8.2ms)[0m  [1mCREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) [0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20140423174809')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Migrating to CreateCheckouts (20140423200920)
+  [1m[36m (7.5ms)[0m  [1mCREATE TABLE `checkouts` (`id` int(11) auto_increment PRIMARY KEY, `product_id` int(11), `store_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20140423200920')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Migrating to RemoveStoreIdColumn (20140424174201)
+  [1m[36m (12.3ms)[0m  [1mALTER TABLE `carts` DROP `store_id`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20140424174201')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to ChangeCartTable (20140424175307)
+  [1m[36m (12.2ms)[0m  [1mALTER TABLE `carts` ADD `user_id` int(11)[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE `carts` DROP `store_id`
+Mysql2::Error: Can't DROP 'store_id'; check that column/key exists: ALTER TABLE `carts` DROP `store_id`
+  [1m[36m (8.7ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (11.2ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateProducts (20140422192915)
+  [1m[35m (7.5ms)[0m  CREATE TABLE `products` (`id` int(11) auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140422192915')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCarts (20140422193038)
+  [1m[35m (6.9ms)[0m  CREATE TABLE `carts` (`id` int(11) auto_increment PRIMARY KEY, `product_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140422193038')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateStores (20140422193723)
+  [1m[35m (7.0ms)[0m  CREATE TABLE `stores` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `location` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140422193723')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to AddFieldsToProducts (20140422203711)
+  [1m[35m (9.6ms)[0m  ALTER TABLE `products` ADD `name` varchar(255)
+  [1m[36m (12.8ms)[0m  [1mALTER TABLE `products` ADD `image` varchar(255)[0m
+  [1m[35m (10.7ms)[0m  ALTER TABLE `products` ADD `description` varchar(255)
+  [1m[36m (12.0ms)[0m  [1mALTER TABLE `products` ADD `price` varchar(255)[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20140422203711')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to AddFieldsToCarts (20140423163910)
+  [1m[36m (10.0ms)[0m  [1mALTER TABLE `carts` ADD `store_id` int(11)[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20140423163910')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to DeviseCreateUsers (20140423174809)
+  [1m[36m (9.2ms)[0m  [1mCREATE TABLE `users` (`id` int(11) auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (7.6ms)[0m  CREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) 
+  [1m[36m (9.3ms)[0m  [1mCREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) [0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20140423174809')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Migrating to CreateCheckouts (20140423200920)
+  [1m[36m (9.4ms)[0m  [1mCREATE TABLE `checkouts` (`id` int(11) auto_increment PRIMARY KEY, `product_id` int(11), `store_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20140423200920')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to ChangeCartTable (20140424175307)
+  [1m[36m (11.2ms)[0m  [1mALTER TABLE `carts` ADD `user_id` int(11)[0m
+  [1m[35m (10.6ms)[0m  ALTER TABLE `carts` DROP `store_id`
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140424175307')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddColumnStoreIdToProducts (20140424195041)
+  [1m[35m (42.3ms)[0m  ALTER TABLE `products` ADD `store_id` int(11)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140424195041')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`

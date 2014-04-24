@@ -8,12 +8,7 @@
           %h1.text-center The Gobbles Shop
           %h3.primary-font.text-center Search through thousands of our products here:
           %form.form-inline.text-center{role: "form"}
-            .form-group
-              %label.sr-only{for: "shop-search"} Search
-              %input#shop-search.form-control.border-color.col-sm-12{"data-original-title" => "", placeholder: "What are you looking for?", title: "", type: "text"}/
-            %button.btn.btn-color{type: "submit"}
-              %i.fa.fa-shopping-cart
-              Search
+            %a.btn.btn-color.btn-lg{href: "/stores/1"} Browse Now!
       / / .row
     / / .container
   / / .color-jumbotron
@@ -23,118 +18,6 @@
       .col-sm-10
         %h2.text-color An Ecommerce Rails Application!
         %p.text-muted Team Gobbles was created to show our skills of ... The purpose of this exercise was to ... Check out our work and we hope you have a great user experience!
-      .col-sm-2
-        %a.btn.btn-color.btn-lg{href: "#"} Browse Now!
-    / / .row
-    %hr/
-    / Our Products
-    .row
-      .col-sm-12
-        %h3.headline.first-child.text-color
-          %span.border-color Our Products
-    .row
-      .col-sm-3
-        .shop-product
-          %a{href: "shop-item.html"}
-            %img.img-responsive{alt: "...", src: "/assets/product-1.jpg"}/
-          %a{href: "shop-item.html"}
-            %h5.primary-font Product #1
-          %p.text-muted
-            Nunc in neque nec arcu vulputate ullamcorper.
-          %p
-            $115,00
-          %a.btn.btn-sm.btn-color{href: "#"}
-            %i.fa.fa-shopping-cart
-            Add to cart
-      .col-sm-3
-        .shop-product
-          %a{href: "shop-item.html"}
-            %img.img-responsive{alt: "...", src: "assets/product-2.jpg"}/
-          %a{href: "shop-item.html"}
-            %h5.primary-font Product #2
-          %p.text-muted
-            Nunc in neque nec arcu vulputate ullamcorper.
-          %p
-            $200,00
-          %a.btn.btn-sm.btn-color{href: "#"}
-            %i.fa.fa-shopping-cart
-            Add to cart
-      .col-sm-3
-        .shop-product
-          %a{href: "shop-item.html"}
-            %img.img-responsive{alt: "...", src: "assets/product-3.jpg"}/
-          %a{href: "shop-item.html"}
-            %h5.primary-font Product #3
-          %p.text-muted
-            Nunc in neque nec arcu vulputate ullamcorper.
-          %p
-            $50,00
-          %a.btn.btn-sm.btn-color{href: "#"}
-            %i.fa.fa-shopping-cart
-            Add to cart
-      .col-sm-3
-        .shop-product
-          %a{href: "shop-item.html"}
-            %img.img-responsive{alt: "...", src: "assets/product-1.jpg"}/
-          %a{href: "shop-item.html"}
-            %h5.primary-font Product #4
-          %p.text-muted
-            Nunc in neque nec arcu vulputate ullamcorper.
-          %p
-            $79,99
-          %a.btn.btn-sm.btn-color{href: "#"}
-            %i.fa.fa-shopping-cart
-            Add to cart
-    / / .row
-    / Featured Stuff
-    .row
-      .col-sm-12
-        %h3.headline.first-child.text-color
-          %span.border-color Our Products
-    .row
-      .col-sm-4
-        .shop-product
-          %a{href: "shop-item.html"}
-            %img.img-responsive{alt: "...", src: "assets/product-1.jpg"}/
-          %a{href: "shop-item.html"}
-            %h5.primary-font Product #1
-          %p.text-muted
-            Nunc in neque nec arcu vulputate ullamcorper.
-          %p.price
-            %span.old $100,00
-            %span.new $89,99
-          %a.btn.btn-sm.btn-color{href: "#"}
-            %i.fa.fa-shopping-cart
-            Add to cart
-      .col-sm-4
-        .shop-product
-          %a{href: "shop-item.html"}
-            %img.img-responsive{alt: "...", src: "assets/product-2.jpg"}/
-          %a{href: "shop-item.html"}
-            %h5.primary-font Product #2
-          %p.text-muted
-            Nunc in neque nec arcu vulputate ullamcorper.
-          %p.price
-            %span.old $50,00
-            %span.new $44,99
-          %a.btn.btn-sm.btn-color{href: "#"}
-            %i.fa.fa-shopping-cart
-            Add to cart
-      .col-sm-4
-        .shop-product.featured
-          %a{href: "shop-item.html"}
-            %img.img-responsive{alt: "...", src: "assets/product-3.jpg"}/
-          %a{href: "shop-item.html"}
-            %h5.primary-font Product #3
-          %p.text-muted
-            Nunc in neque nec arcu vulputate ullamcorper.
-          %p.price
-            %span.old $80,99
-            %span.new $59,99
-          %a.btn.btn-sm.btn-color{href: "#"}
-            %i.fa.fa-shopping-cart
-            Add to cart
-      .col-sm-6
     / / .row
   / / .container
 / / .wrapper
