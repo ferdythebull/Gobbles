@@ -1,0 +1,8 @@
+= form_for [@store, @cart] do |f|
+  %br
+  = f.text_field :product_name
+  |
+  = f.integer :product_id
+  %br
+
+  = f.submit
