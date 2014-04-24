@@ -36887,3 +36887,11 @@ ActionController::RoutingError (No route matches [GET] "/stores/assets/jquery.st
   Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.1ms)
   Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
   Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (29.8ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to ChangeCartsTable (20140424174908)
+  [1m[35m (20.9ms)[0m  ALTER TABLE `carts` ADD `user_id` int(11)
+  [1m[36m (16.9ms)[0m  [1mALTER TABLE `carts` DROP `store_id`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20140424174908')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m

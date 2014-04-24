@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @cart = @store.carts
+    # @cart = @store.carts
   end
 
   def new

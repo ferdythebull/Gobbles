@@ -4,6 +4,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  has_many :carts
+  has_many :products, through: :carts
+
   before_create :create_cart
 
   def create_cart
@@ -11,6 +14,6 @@ class User < ActiveRecord::Base
   end
 private
   def cart_params
-    params.require(:product).permit({checkout_ids: []})
+    params.require(:product).permit({cart_ids: []})
   end
 end
