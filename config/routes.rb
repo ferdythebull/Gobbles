@@ -1,18 +1,15 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :stores
 
   root 'home#index'
   get 'admin' => 'home#admin'
   resources :stores do
-  member do
-    get :admin
-  end
-    resources :carts do 
+    member do
+      get :admin
     end
-  resources :products do
+    resources :products
   end
-  end
+  resources :carts
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
