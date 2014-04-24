@@ -1,6 +1,6 @@
 class CartsController < ApplicationController
   before_filter :find_store
-  before_filter :find_product
+  # before_filter :find_product
   before_filter :find_cart, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -15,6 +15,7 @@ class CartsController < ApplicationController
   end
 
   def create
+    @cart = @store.carts.create cart_params
   end
 
   def edit
@@ -32,7 +33,7 @@ class CartsController < ApplicationController
 
 private
   def find_cart
-    @cart = Cart.find params[:cart_id]
+    @cart = Cart.find params[:id]
   end
 
   def find_store
@@ -40,7 +41,7 @@ private
   end
 
   def find_product
-    @product = @store.product.find params[:id]
+    @product = @store.products.find params[:product_id]
   end
 
   def cart_params
