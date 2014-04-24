@@ -7,7 +7,11 @@ Rails.application.routes.draw do
     member do
       get :admin
     end
-    resources :products
+    resources :products do
+      member do
+        patch :add_to_cart
+      end
+    end
   end
   resources :carts
 

@@ -1,27 +1,26 @@
-%p#notice= notice
-%p
-  %strong Name:
-  = @store.name
-%p
-  %strong Location:
-  = @store.location
-= link_to 'Edit', edit_store_path(@store)
-|
-#{link_to 'Back', stores_path}
-%hr
-= link_to 'Create Product', new_store_product_path(@store)
-%br
-- @products.each do |product|
-  %br
-  %strong Name: 
-  = product.name
-  %br
-  %strong Image: 
-  = product.image
-  %br
-  %strong Description: 
-  = product.description
-  %br
-  %strong Price: 
-  = product.price
-  %br
+/ %p#notice= notice
+/ Wrapper
+.wrapper
+  .container
+    / Our Products
+    .row
+      .col-sm-12
+        %h3.headline.first-child.text-color
+          %span.border-color Our Products
+    .row
+      - @products.each do |product|
+        .col-sm-4
+          .shop-product
+            %a{href: "shop-item.html"}
+              %img.img-responsive{alt: "...", src: "/assets/product-1.jpg"}/
+            %a{href: "shop-item.html"}
+              %h5.primary-font
+              = product.name
+            %p
+              = product.price
+            %a.btn.btn-sm.btn-color{href: "#"}
+              Product Details
+            %br
+    / / .row
+  / / .container
+/ / .wrapper

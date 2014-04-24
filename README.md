@@ -12,11 +12,3 @@ The Admin section will allow you to add images, a description, a title, and a pr
 The User section will display the products in a 3x3 grid of images, with a title and a price. The user can click on an image, which will pull up a description of the product.
 
 The user's selections will be added to a shopping cart.
-
-DUTIES:
-
-Rich - Shopping Cart
-
-Gene - Store
-
-Preston - Products
