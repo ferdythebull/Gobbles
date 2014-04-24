@@ -4,6 +4,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  has_many :carts
+  has_many :products, through: :carts
+
   before_create :create_cart
 
   def create_cart

@@ -1,5 +1,80 @@
-<<<<<<< HEAD
-@product = @store.products.find params[:id]
-=======
-= @product.name
->>>>>>> upstream/master
+/ Wrapper
+.wrapper
+  / Topic Header
+  .topic
+    .container
+      .row
+        .col-sm-4
+          %h3.primary-font Shop Item
+        .col-sm-8
+          %ol.breadcrumb.pull-right.hidden-xs
+            %li
+              %a{:href => "/"} Home
+            %li
+              / = link_to
+              %a{:href => "/stores/#{@store.id}"} Shop
+            %li.active Item
+  .container.shop-item
+    .row
+      .col-sm-9
+        .row
+          .col-sm-6
+            .product-img
+              %a{"data-lightbox" => "products", :href => "/assets/product-1.jpg"}
+                %img.img-responsive.main{:alt => "...", :src => "/assets/product-1.jpg"}
+              .row
+                .col-xs-4
+                  %a{"data-lightbox" => "products", :href => "/assets/product-1.jpg"}
+                    %img.img-responsive{:alt => "...", :src => "/assets/product-1.jpg"}
+                .col-xs-4
+                  %a{"data-lightbox" => "products", :href => "/assets/product-2.jpg"}
+                    %img.img-responsive{:alt => "...", :src => "/assets/product-2.jpg"}
+                .col-xs-4
+                  %a{"data-lightbox" => "products", :href => "/assets/product-3.jpg"}
+                    %img.img-responsive{:alt => "...", :src => "/assets/product-3.jpg"}
+              / / .row
+          .col-sm-6
+            %h3.primary-font.first-child
+              = @product.name
+            %ul.rating.list-inline
+              %li
+                %i.fa.fa-star
+              %li
+                %i.fa.fa-star
+              %li
+                %i.fa.fa-star
+              %li
+                %i.fa.fa-star
+              %li
+                %i.fa.fa-star
+            %span.text-muted.reviews (12 reviews)
+            %p.text-muted
+              = @product.description
+            .price-block
+              %span.price $
+              = @product.price
+              %input.form-control{:name => "pcs", :type => "number", :value => "1"}
+            %br/
+            %a.btn.btn-color{:href => "#"}
+              %i.fa.fa-shopping-cart
+              Add to cart
+        / Item Description
+        .row
+          .col-sm-12
+            %h3.headline.text-color
+              %span.border-color Product Description
+            %p
+              = @product.description
+        / / .row
+      .col-sm-3
+        / Search
+        .shop-category.first-child Search
+        %form.shop-search{:role => "form"}
+          %br
+            %label.sr-only{:for => "query"} Search
+            %input#query.form-control{:placeholder => "Looking for...", :type => "text"}
+          %button.btn.btn-color Search
+    / / .row
+  / / .container
+/ / .wrapper
+
