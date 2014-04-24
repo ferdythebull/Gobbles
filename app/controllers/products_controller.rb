@@ -6,7 +6,6 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @cart = @store.carts
   end
 
   def new
@@ -41,11 +40,8 @@ class ProductsController < ApplicationController
     end
 
     def find_product
-<<<<<<< HEAD
-      @product = @store.products.find params[:product_id]
-=======
-      @product = Product.find params[:id]
->>>>>>> upstream/master
+      @product = @store.products.find params[:id]
+
     end
 
     def product_params
