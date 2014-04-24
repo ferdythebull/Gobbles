@@ -10,21 +10,31 @@
 #{link_to 'Back', stores_path}
 %hr
 = link_to 'Create Product', new_store_product_path(@store)
-%br
-- @products.each do |product|
-  %br
-  %strong Name: 
-  = product.name
-  %br
-  %strong Image: 
-  = product.image
-  %br
-  %strong Description: 
-  = product.description
-  %br
-  %strong Price: 
-  = product.price
-  %br
-  / = link_to "Edit", edit_store_product_path(store)
-  / / |
-  / / = link_to "Delete", store_path(store), method: :delete
+/ Wrapper
+.wrapper
+  .container
+    / Our Products
+    .row
+      .col-sm-12
+        %h3.headline.first-child.text-color
+          %span.border-color Our Products
+    .row
+      - @products.each do |product|
+        .col-sm-3
+          .shop-product
+            %a{href: "shop-item.html"}
+              %img.img-responsive{alt: "...", src: "/assets/product-1.jpg"}/
+            %a{href: "shop-item.html"}
+              %h5.primary-font
+              = product.name
+            %p.text-muted
+              = product.description
+            %p
+              = product.price
+            %a.btn.btn-sm.btn-color{href: "#"}
+              %i.fa.fa-shopping-cart
+              Add to cart
+            %br
+    / / .row
+  / / .container
+/ / .wrapper

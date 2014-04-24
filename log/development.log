@@ -36036,3 +36036,10 @@ ActionView::Template::Error (undefined local variable or method `store' for #<#<
   Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.6ms)
 >>>>>>> upstream/master
 >>>>>>> upstream/master
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateCheckouts (20140423200920)
+  [1m[35m (9.7ms)[0m  CREATE TABLE `checkouts` (`id` int(11) auto_increment PRIMARY KEY, `product_id` int(11), `store_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140423200920')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
