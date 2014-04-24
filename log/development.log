@@ -18014,6 +18014,7 @@ Migrating to DeviseCreateUsers (20140423174809)
   [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
 <<<<<<< HEAD
+<<<<<<< HEAD
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
 
@@ -18095,6 +18096,201 @@ Started GET "/assets/font-awesome/css/font-awesome.min.css" for 127.0.0.1 at 201
 
 
 Started GET "/users/assets/bootstrap.min.js" for 127.0.0.1 at 2014-04-23 16:03:29 -0400
+=======
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to DeviseCreateUsers (20140423174809)
+  [1m[35m (10.3ms)[0m  CREATE TABLE `users` (`id` int(11) auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (10.1ms)[0m  [1mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  [1m[35m (18.9ms)[0m  CREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) 
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140423174809')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-23 15:51:39 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (46.0ms)
+Completed 200 OK in 312ms (Views: 301.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-04-23 15:51:39 -0400
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-04-23 15:51:39 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-04-23 15:51:39 -0400
+
+
+Started GET "/assets/color-styles.css?body=1" for 127.0.0.1 at 2014-04-23 15:51:39 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-04-23 15:51:39 -0400
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-04-23 15:51:39 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-04-23 15:51:39 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-23 15:51:39 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-04-23 15:51:39 -0400
+
+
+Started GET "/assets/lightbox.css?body=1" for 127.0.0.1 at 2014-04-23 15:51:39 -0400
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-04-23 15:51:39 -0400
+
+
+Started GET "/assets/font-awesome/css/font-awesome.min.css" for 127.0.0.1 at 2014-04-23 15:51:39 -0400
+
+
+Started GET "/assets/stores.css?body=1" for 127.0.0.1 at 2014-04-23 15:51:39 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-23 15:51:39 -0400
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2014-04-23 15:51:39 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-23 15:51:39 -0400
+
+
+Started GET "/assets/ui-elements.css?body=1" for 127.0.0.1 at 2014-04-23 15:51:40 -0400
+
+
+Started GET "/assets/bootstrap.css" for 127.0.0.1 at 2014-04-23 15:51:40 -0400
+
+
+Started GET "/assets/color-styles.css" for 127.0.0.1 at 2014-04-23 15:51:40 -0400
+
+
+Started GET "/assets/ui-elements.css" for 127.0.0.1 at 2014-04-23 15:51:40 -0400
+
+
+Started GET "/assets/custom.css" for 127.0.0.1 at 2014-04-23 15:51:40 -0400
+
+
+Started GET "/assets/animate.css" for 127.0.0.1 at 2014-04-23 15:51:40 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-23 15:51:40 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-23 15:51:40 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-23 15:51:40 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-23 15:51:40 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-23 15:51:40 -0400
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-04-23 15:51:40 -0400
+
+
+Started GET "/assets/custom.js?body=1" for 127.0.0.1 at 2014-04-23 15:51:40 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-04-23 15:51:40 -0400
+
+
+Started GET "/assets/isotope-custom.js?body=1" for 127.0.0.1 at 2014-04-23 15:51:40 -0400
+
+
+Started GET "/assets/jquery.countdown.js?body=1" for 127.0.0.1 at 2014-04-23 15:51:40 -0400
+
+
+Started GET "/assets/jquery.countdown.min.js?body=1" for 127.0.0.1 at 2014-04-23 15:51:40 -0400
+
+
+Started GET "/assets/jquery.plugin.min.js?body=1" for 127.0.0.1 at 2014-04-23 15:51:40 -0400
+
+
+Started GET "/assets/jquery.plugin.js?body=1" for 127.0.0.1 at 2014-04-23 15:51:40 -0400
+
+
+Started GET "/assets/jquery.sticky.js?body=1" for 127.0.0.1 at 2014-04-23 15:51:40 -0400
+
+
+Started GET "/assets/lightbox-2.6.min.js?body=1" for 127.0.0.1 at 2014-04-23 15:51:40 -0400
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-04-23 15:51:40 -0400
+
+
+Started GET "/assets/scrolltopcontrol.js?body=1" for 127.0.0.1 at 2014-04-23 15:51:40 -0400
+
+
+Started GET "/assets/stores.js?body=1" for 127.0.0.1 at 2014-04-23 15:51:40 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-23 15:51:40 -0400
+
+
+Started GET "/assets/bootstrap.min.js" for 127.0.0.1 at 2014-04-23 15:51:40 -0400
+
+
+Started GET "/assets/scrolltopcontrol.js" for 127.0.0.1 at 2014-04-23 15:51:40 -0400
+
+
+Started GET "/assets/jquery.sticky.js" for 127.0.0.1 at 2014-04-23 15:51:40 -0400
+
+
+Started GET "/assets/custom.js" for 127.0.0.1 at 2014-04-23 15:51:40 -0400
+
+
+Started GET "/assets/product-1.jpg" for 127.0.0.1 at 2014-04-23 15:51:40 -0400
+
+
+Started GET "/assets/product-2.jpg" for 127.0.0.1 at 2014-04-23 15:51:40 -0400
+
+
+Started GET "/assets/product-3.jpg" for 127.0.0.1 at 2014-04-23 15:51:40 -0400
+
+
+Started GET "/assets/font-awesome/fonts/fontawesome-webfont.woff?v=4.0.3" for 127.0.0.1 at 2014-04-23 15:51:40 -0400
+
+
+Started GET "/assets/favicon.png" for 127.0.0.1 at 2014-04-23 15:51:40 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-23 15:51:58 -0400
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 7ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-04-23 15:51:58 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@store/gems/devise-3.2.4/app/views/devise/shared/_links.erb (1.7ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@store/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 55ms (Views: 37.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-04-23 15:51:58 -0400
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-04-23 15:51:58 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-04-23 15:51:58 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-04-23 15:51:58 -0400
+
+
+Started GET "/users/assets/bootstrap.min.js" for 127.0.0.1 at 2014-04-23 15:51:58 -0400
+>>>>>>> upstream/master
 
 ActionController::RoutingError (No route matches [GET] "/users/assets/bootstrap.min.js"):
 =======
@@ -30770,41 +30966,11 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-23 16:56:58
 
 Started GET "/stores/assets/bootstrap.min.js" for 127.0.0.1 at 2014-04-23 16:56:58 -0400
 
+<<<<<<< HEAD
 ActionController::RoutingError (No route matches [GET] "/stores/assets/bootstrap.min.js"):
-  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
-  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
-  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
-  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
-  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
-  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
-  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
-  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
-  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
-  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
-  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
-  rack (1.5.2) lib/rack/lock.rb:17:in `call'
-  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
-  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
-  railties (4.1.0) lib/rails/engine.rb:514:in `call'
-  railties (4.1.0) lib/rails/application.rb:144:in `call'
-  rack (1.5.2) lib/rack/lock.rb:17:in `call'
-  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
-  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
-  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
-  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
-  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
-
-
-  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
-  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.0ms)
-  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
-  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (54.1ms)
-
-
-Started GET "/stores/assets/scrolltopcontrol.js" for 127.0.0.1 at 2014-04-23 16:56:58 -0400
-
+=======
 ActionController::RoutingError (No route matches [GET] "/stores/assets/scrolltopcontrol.js"):
+>>>>>>> upstream/master
 >>>>>>> upstream/master
   actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
   actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
@@ -30827,6 +30993,62 @@ ActionController::RoutingError (No route matches [GET] "/stores/assets/scrolltop
   rack (1.5.2) lib/rack/content_length.rb:14:in `call'
   rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
 <<<<<<< HEAD
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.8ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.7ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (61.7ms)
+
+
+Started GET "/users/assets/scrolltopcontrol.js" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+ActionController::RoutingError (No route matches [GET] "/users/assets/scrolltopcontrol.js"):
+=======
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.0ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (54.1ms)
+
+
+Started GET "/stores/assets/scrolltopcontrol.js" for 127.0.0.1 at 2014-04-23 16:56:58 -0400
+
+<<<<<<< HEAD
+ActionController::RoutingError (No route matches [GET] "/stores/assets/scrolltopcontrol.js"):
+=======
+ActionController::RoutingError (No route matches [GET] "/stores/assets/jquery.sticky.js"):
+>>>>>>> upstream/master
+>>>>>>> upstream/master
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
+<<<<<<< HEAD
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
@@ -30841,6 +31063,67 @@ ActionController::RoutingError (No route matches [GET] "/stores/assets/scrolltop
 Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-04-23 16:31:18 -0400
 
 ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.css.map"):
+=======
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.0ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (67.6ms)
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+
+Started GET "/assets/color-styles.css?body=1" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+
+Started GET "/assets/stores.css?body=1" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+
+Started GET "/assets/ui-elements.css?body=1" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+
+Started GET "/assets/lightbox.css?body=1" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+
+Started GET "/assets/bootstrap.css" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+
+Started GET "/assets/color-styles.css" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+
+Started GET "/assets/ui-elements.css" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+
+Started GET "/users/assets/jquery.sticky.js" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+ActionController::RoutingError (No route matches [GET] "/users/assets/jquery.sticky.js"):
+>>>>>>> upstream/master
 =======
   /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
@@ -31244,7 +31527,11 @@ ActionController::RoutingError (No route matches [GET] "/stores/assets/bootstrap
 
 Started GET "/stores/assets/scrolltopcontrol.js" for 127.0.0.1 at 2014-04-23 16:57:22 -0400
 
+<<<<<<< HEAD
 ActionController::RoutingError (No route matches [GET] "/stores/assets/scrolltopcontrol.js"):
+=======
+ActionController::RoutingError (No route matches [GET] "/stores/assets/jquery.sticky.js"):
+>>>>>>> upstream/master
 >>>>>>> upstream/master
   actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
   actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
@@ -31267,6 +31554,7 @@ ActionController::RoutingError (No route matches [GET] "/stores/assets/scrolltop
   rack (1.5.2) lib/rack/content_length.rb:14:in `call'
   rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
 <<<<<<< HEAD
+<<<<<<< HEAD
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
@@ -31285,6 +31573,22 @@ Started GET "/assets/bootstrap-theme.css.map" for 127.0.0.1 at 2014-04-23 16:32:
 
 ActionController::RoutingError (No route matches [GET] "/assets/bootstrap-theme.css.map"):
 =======
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.1ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.5ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (59.4ms)
+
+
+Started GET "/users/assets/custom.js" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+ActionController::RoutingError (No route matches [GET] "/users/assets/custom.js"):
+>>>>>>> upstream/master
+=======
   /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
   /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
@@ -31298,7 +31602,11 @@ ActionController::RoutingError (No route matches [GET] "/assets/bootstrap-theme.
 
 Started GET "/stores/assets/jquery.sticky.js" for 127.0.0.1 at 2014-04-23 16:57:22 -0400
 
+<<<<<<< HEAD
 ActionController::RoutingError (No route matches [GET] "/stores/assets/jquery.sticky.js"):
+=======
+ActionController::RoutingError (No route matches [GET] "/stores/assets/custom.js"):
+>>>>>>> upstream/master
 >>>>>>> upstream/master
   actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
   actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
@@ -31320,6 +31628,7 @@ ActionController::RoutingError (No route matches [GET] "/stores/assets/jquery.st
   rack (1.5.2) lib/rack/lock.rb:17:in `call'
   rack (1.5.2) lib/rack/content_length.rb:14:in `call'
   rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
 <<<<<<< HEAD
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
@@ -31414,12 +31723,217 @@ Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-23 16:41:10 
 
 
 Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-23 16:41:10 -0400
+=======
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
 
 
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.5ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (44.9ms)
+
+
+Started GET "/assets/animate.css" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+
+Started GET "/assets/font-awesome/css/font-awesome.min.css" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+
+Started GET "/assets/custom.css" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+
+Started GET "/assets/custom.js?body=1" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+
+Started GET "/assets/jquery.countdown.js?body=1" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+
+Started GET "/assets/jquery.countdown.min.js?body=1" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+
+Started GET "/assets/isotope-custom.js?body=1" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+
+Started GET "/assets/jquery.plugin.min.js?body=1" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+
+Started GET "/assets/lightbox-2.6.min.js?body=1" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+
+Started GET "/assets/jquery.sticky.js?body=1" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+
+Started GET "/assets/jquery.plugin.js?body=1" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+
+Started GET "/assets/stores.js?body=1" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+
+Started GET "/assets/scrolltopcontrol.js?body=1" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+
+Started GET "/assets/font-awesome/fonts/fontawesome-webfont.woff?v=4.0.3" for 127.0.0.1 at 2014-04-23 15:51:59 -0400
+
+
+Started GET "/admin" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+Processing by HomeController#admin as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@store/gems/devise-3.2.4/app/views/devise/shared/_links.erb (0.5ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@store/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+
+Started GET "/users/assets/custom.js" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+>>>>>>> upstream/master
+
+ActionController::RoutingError (No route matches [GET] "/users/assets/custom.js"):
+=======
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+<<<<<<< HEAD
 Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-23 16:41:10 -0400
+=======
+>>>>>>> upstream/master
 
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.5ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.1ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (39.1ms)
 
+<<<<<<< HEAD
 Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-23 16:41:10 -0400
+=======
+
+Started GET "/assets/favicon.png" for 127.0.0.1 at 2014-04-23 16:53:54 -0400
+
+
+Started GET "/stores/1" for 127.0.0.1 at 2014-04-23 16:53:58 -0400
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.3ms)[0m  [1mSELECT  `stores`.* FROM `stores`  WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT `products`.* FROM `products`
+  Rendered stores/show.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-04-23 16:53:58 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-04-23 16:53:58 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-04-23 16:53:58 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-23 16:53:58 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-04-23 16:53:58 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-04-23 16:53:58 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-04-23 16:53:58 -0400
+
+
+Started GET "/assets/color-styles.css?body=1" for 127.0.0.1 at 2014-04-23 16:53:58 -0400
+
+
+Started GET "/assets/lightbox.css?body=1" for 127.0.0.1 at 2014-04-23 16:53:59 -0400
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-04-23 16:53:59 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-23 16:53:59 -0400
+
+
+Started GET "/assets/stores.css?body=1" for 127.0.0.1 at 2014-04-23 16:53:59 -0400
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2014-04-23 16:53:59 -0400
+
+
+Started GET "/assets/ui-elements.css?body=1" for 127.0.0.1 at 2014-04-23 16:53:59 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-23 16:53:59 -0400
+
+
+Started GET "/assets/bootstrap.css" for 127.0.0.1 at 2014-04-23 16:53:59 -0400
+
+
+Started GET "/assets/color-styles.css" for 127.0.0.1 at 2014-04-23 16:53:59 -0400
+
+
+Started GET "/assets/ui-elements.css" for 127.0.0.1 at 2014-04-23 16:53:59 -0400
+
+
+Started GET "/assets/custom.css" for 127.0.0.1 at 2014-04-23 16:53:59 -0400
+
+
+Started GET "/assets/animate.css" for 127.0.0.1 at 2014-04-23 16:53:59 -0400
+
+
+Started GET "/assets/font-awesome/css/font-awesome.min.css" for 127.0.0.1 at 2014-04-23 16:53:59 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-23 16:53:59 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-23 16:53:59 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-23 16:53:59 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-23 16:53:59 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-23 16:53:59 -0400
+
+
+Started GET "/assets/custom.js?body=1" for 127.0.0.1 at 2014-04-23 16:53:59 -0400
+>>>>>>> upstream/master
 
 
 Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-23 16:41:10 -0400
@@ -31460,40 +31974,10 @@ Started GET "/assets/scrolltopcontrol.js?body=1" for 127.0.0.1 at 2014-04-23 16:
 
 Started GET "/assets/stores.js?body=1" for 127.0.0.1 at 2014-04-23 16:41:10 -0400
 
-
-Started GET "/assets/jquery.sticky.js?body=1" for 127.0.0.1 at 2014-04-23 16:41:10 -0400
-
-
-Started GET "/assets/bootstrap.min.js" for 127.0.0.1 at 2014-04-23 16:41:10 -0400
-
-
-Started GET "/assets/scrolltopcontrol.js" for 127.0.0.1 at 2014-04-23 16:41:10 -0400
-
-
-Started GET "/assets/jquery.sticky.js" for 127.0.0.1 at 2014-04-23 16:41:10 -0400
-
-
-Started GET "/assets/custom.js" for 127.0.0.1 at 2014-04-23 16:41:10 -0400
-
-
-Started GET "/assets/bootstrap-theme.css.map" for 127.0.0.1 at 2014-04-23 16:41:10 -0400
-
-ActionController::RoutingError (No route matches [GET] "/assets/bootstrap-theme.css.map"):
+<<<<<<< HEAD
 =======
-  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
-  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
-  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
-
-
-  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
-  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.0ms)
-  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
-  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (33.6ms)
-
-
-Started GET "/stores/assets/custom.js" for 127.0.0.1 at 2014-04-23 16:57:23 -0400
-
-ActionController::RoutingError (No route matches [GET] "/stores/assets/custom.js"):
+ActionController::RoutingError (No route matches [GET] "/stores/assets/bootstrap.min.js"):
+>>>>>>> upstream/master
   actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
   actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
   railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
@@ -31514,6 +31998,380 @@ ActionController::RoutingError (No route matches [GET] "/stores/assets/custom.js
   rack (1.5.2) lib/rack/lock.rb:17:in `call'
   rack (1.5.2) lib/rack/content_length.rb:14:in `call'
   rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.1ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (52.2ms)
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+
+Started GET "/users/assets/scrolltopcontrol.js" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+ActionController::RoutingError (No route matches [GET] "/users/assets/scrolltopcontrol.js"):
+=======
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+>>>>>>> upstream/master
+
+Started GET "/assets/jquery.sticky.js?body=1" for 127.0.0.1 at 2014-04-23 16:41:10 -0400
+
+
+Started GET "/assets/bootstrap.min.js" for 127.0.0.1 at 2014-04-23 16:41:10 -0400
+
+
+<<<<<<< HEAD
+Started GET "/assets/scrolltopcontrol.js" for 127.0.0.1 at 2014-04-23 16:41:10 -0400
+=======
+ActionController::RoutingError (No route matches [GET] "/stores/assets/jquery.sticky.js"):
+>>>>>>> upstream/master
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.6ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (68.0ms)
+
+
+Started GET "/users/assets/bootstrap.min.js" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+ActionController::RoutingError (No route matches [GET] "/users/assets/bootstrap.min.js"):
+=======
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+>>>>>>> upstream/master
+
+
+Started GET "/assets/jquery.sticky.js" for 127.0.0.1 at 2014-04-23 16:41:10 -0400
+
+
+Started GET "/assets/custom.js" for 127.0.0.1 at 2014-04-23 16:41:10 -0400
+
+<<<<<<< HEAD
+
+Started GET "/assets/bootstrap-theme.css.map" for 127.0.0.1 at 2014-04-23 16:41:10 -0400
+
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap-theme.css.map"):
+=======
+ActionController::RoutingError (No route matches [GET] "/stores/assets/scrolltopcontrol.js"):
+>>>>>>> upstream/master
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.8ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (53.9ms)
+
+
+Started GET "/users/assets/jquery.sticky.js" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+ActionController::RoutingError (No route matches [GET] "/users/assets/jquery.sticky.js"):
+>>>>>>> upstream/master
+=======
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.0ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (33.6ms)
+
+
+Started GET "/stores/assets/custom.js" for 127.0.0.1 at 2014-04-23 16:57:23 -0400
+
+ActionController::RoutingError (No route matches [GET] "/stores/assets/custom.js"):
+>>>>>>> upstream/master
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.8ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (64.6ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+
+Started GET "/assets/color-styles.css?body=1" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+
+Started GET "/assets/lightbox.css?body=1" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+
+Started GET "/assets/stores.css?body=1" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+
+Started GET "/assets/ui-elements.css?body=1" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+
+Started GET "/assets/bootstrap.css" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+
+Started GET "/assets/color-styles.css" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+
+Started GET "/assets/ui-elements.css" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+
+Started GET "/assets/custom.css" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+
+Started GET "/assets/animate.css" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+
+Started GET "/assets/font-awesome/css/font-awesome.min.css" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+
+Started GET "/assets/custom.js?body=1" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+
+Started GET "/assets/isotope-custom.js?body=1" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+
+Started GET "/assets/jquery.countdown.js?body=1" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+
+Started GET "/assets/jquery.countdown.min.js?body=1" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+
+Started GET "/assets/jquery.plugin.js?body=1" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+
+Started GET "/assets/jquery.plugin.min.js?body=1" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+
+Started GET "/assets/jquery.sticky.js?body=1" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+
+Started GET "/assets/lightbox-2.6.min.js?body=1" for 127.0.0.1 at 2014-04-23 15:54:57 -0400
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-04-23 15:54:58 -0400
+
+
+Started GET "/assets/scrolltopcontrol.js?body=1" for 127.0.0.1 at 2014-04-23 15:54:58 -0400
+
+
+Started GET "/assets/stores.js?body=1" for 127.0.0.1 at 2014-04-23 15:54:58 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-23 15:54:58 -0400
+
+
+Started GET "/assets/favicon.png" for 127.0.0.1 at 2014-04-23 15:54:58 -0400
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-04-23 15:55:07 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@store/gems/devise-3.2.4/app/views/devise/shared/_links.erb (0.5ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@store/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 38ms (Views: 23.1ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/color-styles.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/lightbox.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/stores.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/ui-elements.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/bootstrap.css" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/color-styles.css" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/ui-elements.css" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/custom.css" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/animate.css" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/font-awesome/css/font-awesome.min.css" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/users/assets/bootstrap.min.js" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+ActionController::RoutingError (No route matches [GET] "/users/assets/bootstrap.min.js"):
+=======
   /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
   /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
@@ -31657,40 +32515,6 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-23 16:57:32
 Started GET "/stores/assets/bootstrap.min.js" for 127.0.0.1 at 2014-04-23 16:57:32 -0400
 
 ActionController::RoutingError (No route matches [GET] "/stores/assets/bootstrap.min.js"):
-  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
-  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
-  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
-  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
-  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
-  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
-  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
-  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
-  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
-  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
-  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
-  rack (1.5.2) lib/rack/lock.rb:17:in `call'
-  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
-  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
-  railties (4.1.0) lib/rails/engine.rb:514:in `call'
-  railties (4.1.0) lib/rails/application.rb:144:in `call'
-  rack (1.5.2) lib/rack/lock.rb:17:in `call'
-  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
-  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
-  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
-  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
-  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
-
-
-  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
-  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.2ms)
-  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.5ms)
-  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (47.7ms)
-
-
-Started GET "/stores/assets/scrolltopcontrol.js" for 127.0.0.1 at 2014-04-23 16:57:32 -0400
-
-ActionController::RoutingError (No route matches [GET] "/stores/assets/scrolltopcontrol.js"):
 >>>>>>> upstream/master
   actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
   actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
@@ -31713,9 +32537,85 @@ ActionController::RoutingError (No route matches [GET] "/stores/assets/scrolltop
   rack (1.5.2) lib/rack/content_length.rb:14:in `call'
   rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
 <<<<<<< HEAD
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.6ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (55.5ms)
+
+
+Started GET "/users/assets/scrolltopcontrol.js" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+ActionController::RoutingError (No route matches [GET] "/users/assets/scrolltopcontrol.js"):
+=======
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.2ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.5ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (47.7ms)
+
+
+Started GET "/stores/assets/scrolltopcontrol.js" for 127.0.0.1 at 2014-04-23 16:57:32 -0400
+
+<<<<<<< HEAD
+ActionController::RoutingError (No route matches [GET] "/stores/assets/scrolltopcontrol.js"):
+=======
+ActionController::RoutingError (No route matches [GET] "/stores/assets/jquery.sticky.js"):
+>>>>>>> upstream/master
+>>>>>>> upstream/master
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
+<<<<<<< HEAD
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+=======
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.9ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (42.8ms)
+
+
+Started GET "/users/assets/jquery.sticky.js" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+ActionController::RoutingError (No route matches [GET] "/users/assets/jquery.sticky.js"):
+=======
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+>>>>>>> upstream/master
 
 
   Rendered /Users/genenettles/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
@@ -31724,6 +32624,7 @@ ActionController::RoutingError (No route matches [GET] "/stores/assets/scrolltop
   Rendered /Users/genenettles/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (46.2ms)
 
 
+<<<<<<< HEAD
 Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-04-23 16:41:10 -0400
 
 ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.css.map"):
@@ -31767,6 +32668,310 @@ ActionController::RoutingError (No route matches [GET] "/stores/assets/jquery.st
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+=======
+Started GET "/stores/assets/scrolltopcontrol.js" for 127.0.0.1 at 2014-04-23 16:54:27 -0400
+
+ActionController::RoutingError (No route matches [GET] "/stores/assets/scrolltopcontrol.js"):
+>>>>>>> upstream/master
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.4ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (39.8ms)
+
+
+Started GET "/users/assets/custom.js" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+ActionController::RoutingError (No route matches [GET] "/users/assets/custom.js"):
+=======
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (34.2ms)
+
+
+Started GET "/stores/assets/custom.js" for 127.0.0.1 at 2014-04-23 16:54:27 -0400
+
+ActionController::RoutingError (No route matches [GET] "/stores/assets/custom.js"):
+>>>>>>> upstream/master
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.8ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (42.5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/custom.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/isotope-custom.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/jquery.countdown.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/jquery.countdown.min.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/jquery.plugin.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/jquery.plugin.min.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/jquery.sticky.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/lightbox-2.6.min.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/scrolltopcontrol.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/stores.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/assets/favicon.png" for 127.0.0.1 at 2014-04-23 15:55:08 -0400
+
+
+Started GET "/admin" for 127.0.0.1 at 2014-04-23 15:55:15 -0400
+Processing by HomeController#admin as HTML
+  [1m[35mStore Load (0.3ms)[0m  SELECT `stores`.* FROM `stores`
+  Rendered home/admin.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 128ms (Views: 17.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:15 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:15 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:15 -0400
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:15 -0400
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:15 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:15 -0400
+
+
+Started GET "/assets/color-styles.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:15 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/assets/lightbox.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/assets/stores.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/assets/ui-elements.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/assets/custom.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/assets/isotope-custom.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/assets/jquery.countdown.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/assets/jquery.countdown.min.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/assets/jquery.plugin.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/assets/jquery.plugin.min.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/assets/jquery.sticky.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/assets/lightbox-2.6.min.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/assets/scrolltopcontrol.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/assets/stores.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/assets/bootstrap.css" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/assets/color-styles.css" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/assets/ui-elements.css" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/assets/custom.css" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/assets/animate.css" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/assets/font-awesome/css/font-awesome.min.css" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/assets/bootstrap.min.js" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/assets/scrolltopcontrol.js" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/assets/jquery.sticky.js" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/assets/custom.js" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/img/close.png" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+ActionController::RoutingError (No route matches [GET] "/img/close.png"):
+=======
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.9ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (38.6ms)
+
+
+Started GET "/assets/favicon.png" for 127.0.0.1 at 2014-04-23 16:54:27 -0400
+>>>>>>> upstream/master
 
 
   Rendered /Users/genenettles/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
@@ -31897,49 +33102,10 @@ Started GET "/assets/jquery.plugin.min.js?body=1" for 127.0.0.1 at 2014-04-23 16
 
 Started GET "/assets/lightbox-2.6.min.js?body=1" for 127.0.0.1 at 2014-04-23 16:41:13 -0400
 
-
-Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-04-23 16:41:13 -0400
-
-
-Started GET "/assets/scrolltopcontrol.js?body=1" for 127.0.0.1 at 2014-04-23 16:41:13 -0400
-
-
-Started GET "/assets/stores.js?body=1" for 127.0.0.1 at 2014-04-23 16:41:13 -0400
-
-
-Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-23 16:41:13 -0400
-
-
-Started GET "/assets/bootstrap.min.js" for 127.0.0.1 at 2014-04-23 16:41:13 -0400
-
-
-Started GET "/assets/scrolltopcontrol.js" for 127.0.0.1 at 2014-04-23 16:41:13 -0400
-
-
-Started GET "/assets/jquery.sticky.js" for 127.0.0.1 at 2014-04-23 16:41:13 -0400
-
-
-Started GET "/assets/custom.js" for 127.0.0.1 at 2014-04-23 16:41:13 -0400
-
-
-Started GET "/assets/bootstrap-theme.css.map" for 127.0.0.1 at 2014-04-23 16:41:13 -0400
-
-ActionController::RoutingError (No route matches [GET] "/assets/bootstrap-theme.css.map"):
+<<<<<<< HEAD
 =======
-  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
-  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
-  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
-
-
-  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
-  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.0ms)
-  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
-  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (31.8ms)
-
-
-Started GET "/stores/assets/custom.js" for 127.0.0.1 at 2014-04-23 16:57:32 -0400
-
-ActionController::RoutingError (No route matches [GET] "/stores/assets/custom.js"):
+ActionController::RoutingError (No route matches [GET] "/stores/assets/bootstrap.min.js"):
+>>>>>>> upstream/master
   actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
   actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
   railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
@@ -31960,6 +33126,198 @@ ActionController::RoutingError (No route matches [GET] "/stores/assets/custom.js
   rack (1.5.2) lib/rack/lock.rb:17:in `call'
   rack (1.5.2) lib/rack/content_length.rb:14:in `call'
   rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.7ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (69.1ms)
+
+
+Started GET "/img/loading.gif" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+ActionController::RoutingError (No route matches [GET] "/img/loading.gif"):
+=======
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+>>>>>>> upstream/master
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-04-23 16:41:13 -0400
+
+
+Started GET "/assets/scrolltopcontrol.js?body=1" for 127.0.0.1 at 2014-04-23 16:41:13 -0400
+
+
+<<<<<<< HEAD
+Started GET "/assets/stores.js?body=1" for 127.0.0.1 at 2014-04-23 16:41:13 -0400
+=======
+ActionController::RoutingError (No route matches [GET] "/stores/assets/scrolltopcontrol.js"):
+>>>>>>> upstream/master
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.4ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (69.7ms)
+
+
+Started GET "/img/prev.png" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+ActionController::RoutingError (No route matches [GET] "/img/prev.png"):
+=======
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+>>>>>>> upstream/master
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-23 16:41:13 -0400
+
+
+Started GET "/assets/bootstrap.min.js" for 127.0.0.1 at 2014-04-23 16:41:13 -0400
+
+<<<<<<< HEAD
+
+Started GET "/assets/scrolltopcontrol.js" for 127.0.0.1 at 2014-04-23 16:41:13 -0400
+
+
+Started GET "/assets/jquery.sticky.js" for 127.0.0.1 at 2014-04-23 16:41:13 -0400
+
+
+Started GET "/assets/custom.js" for 127.0.0.1 at 2014-04-23 16:41:13 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map" for 127.0.0.1 at 2014-04-23 16:41:13 -0400
+
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap-theme.css.map"):
+=======
+ActionController::RoutingError (No route matches [GET] "/stores/assets/jquery.sticky.js"):
+>>>>>>> upstream/master
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.8ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (62.8ms)
+
+
+Started GET "/img/next.png" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+ActionController::RoutingError (No route matches [GET] "/img/next.png"):
+>>>>>>> upstream/master
+=======
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.0ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (31.8ms)
+
+
+Started GET "/stores/assets/custom.js" for 127.0.0.1 at 2014-04-23 16:57:32 -0400
+
+ActionController::RoutingError (No route matches [GET] "/stores/assets/custom.js"):
+>>>>>>> upstream/master
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.8ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (49.4ms)
+
+
+Started GET "/assets/font-awesome/fonts/fontawesome-webfont.woff?v=4.0.3" for 127.0.0.1 at 2014-04-23 15:55:16 -0400
+
+
+Started GET "/stores/new" for 127.0.0.1 at 2014-04-23 15:55:19 -0400
+Processing by StoresController#new as HTML
+  Rendered stores/_form.html.haml (17.3ms)
+  Rendered stores/new.html.haml within layouts/application (21.1ms)
+Completed 200 OK in 45ms (Views: 39.1ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/stores/assets/bootstrap.min.js" for 127.0.0.1 at 2014-04-23 15:55:19 -0400
+=======
   /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
   /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
@@ -32100,7 +33458,12 @@ Started GET "/assets/stores.js?body=1" for 127.0.0.1 at 2014-04-23 16:57:51 -040
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-23 16:57:51 -0400
 
 
+<<<<<<< HEAD
 Started GET "/stores/assets/scrolltopcontrol.js" for 127.0.0.1 at 2014-04-23 16:57:51 -0400
+=======
+Started GET "/stores/assets/bootstrap.min.js" for 127.0.0.1 at 2014-04-23 16:56:30 -0400
+>>>>>>> upstream/master
+>>>>>>> upstream/master
 
 ActionController::RoutingError (No route matches [GET] "/stores/assets/scrolltopcontrol.js"):
   actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
@@ -32123,6 +33486,20 @@ ActionController::RoutingError (No route matches [GET] "/stores/assets/scrolltop
   rack (1.5.2) lib/rack/lock.rb:17:in `call'
   rack (1.5.2) lib/rack/content_length.rb:14:in `call'
   rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.9ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (53.4ms)
+
+
+Started GET "/stores/assets/scrolltopcontrol.js" for 127.0.0.1 at 2014-04-23 15:55:19 -0400
+=======
   /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
   /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
@@ -32134,7 +33511,12 @@ ActionController::RoutingError (No route matches [GET] "/stores/assets/scrolltop
   Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (54.5ms)
 
 
+<<<<<<< HEAD
 Started GET "/stores/assets/bootstrap.min.js" for 127.0.0.1 at 2014-04-23 16:57:51 -0400
+=======
+Started GET "/stores/assets/scrolltopcontrol.js" for 127.0.0.1 at 2014-04-23 16:56:30 -0400
+>>>>>>> upstream/master
+>>>>>>> upstream/master
 
 ActionController::RoutingError (No route matches [GET] "/stores/assets/bootstrap.min.js"):
   actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
@@ -32157,17 +33539,202 @@ ActionController::RoutingError (No route matches [GET] "/stores/assets/bootstrap
   rack (1.5.2) lib/rack/lock.rb:17:in `call'
   rack (1.5.2) lib/rack/content_length.rb:14:in `call'
   rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.5ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (40.5ms)
+
+
+Started GET "/stores/assets/custom.js" for 127.0.0.1 at 2014-04-23 15:55:20 -0400
+
+ActionController::RoutingError (No route matches [GET] "/stores/assets/custom.js"):
+=======
   /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
   /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
 
 
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (40.0ms)
+
+
+Started GET "/stores/assets/jquery.sticky.js" for 127.0.0.1 at 2014-04-23 16:56:30 -0400
+
+ActionController::RoutingError (No route matches [GET] "/stores/assets/jquery.sticky.js"):
+>>>>>>> upstream/master
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.1ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (39.9ms)
+
+
+Started GET "/stores/assets/jquery.sticky.js" for 127.0.0.1 at 2014-04-23 15:55:20 -0400
+
+ActionController::RoutingError (No route matches [GET] "/stores/assets/jquery.sticky.js"):
+=======
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+<<<<<<< HEAD
   Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
   Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.2ms)
   Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
   Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (34.2ms)
+=======
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.4ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (36.5ms)
 
 
+Started GET "/stores/assets/custom.js" for 127.0.0.1 at 2014-04-23 16:56:30 -0400
+
+ActionController::RoutingError (No route matches [GET] "/stores/assets/custom.js"):
+>>>>>>> upstream/master
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.6ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (41.4ms)
+
+
+Started POST "/stores" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+Processing by StoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i5i7t06YB5MneVQ10C0GtdnZBY+ukRLqXJG0biOWRyk=", "store"=>{"name"=>"hi", "location"=>"here"}, "commit"=>"Create Store"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `stores` (`created_at`, `location`, `name`, `updated_at`) VALUES ('2014-04-23 19:55:27', 'here', 'hi', '2014-04-23 19:55:27')
+  [1m[36m (5.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/stores/1
+Completed 302 Found in 11ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/stores/1" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStore Load (0.4ms)[0m  SELECT  `stores`.* FROM `stores`  WHERE `stores`.`id` = 1 LIMIT 1
+  Rendered stores/show.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 32ms (Views: 29.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/assets/color-styles.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/assets/lightbox.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/assets/stores.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/assets/ui-elements.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/assets/bootstrap.css" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/assets/color-styles.css" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+>>>>>>> upstream/master
+
+Started GET "/assets/ui-elements.css" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+<<<<<<< HEAD
 Started GET "/stores/assets/jquery.sticky.js" for 127.0.0.1 at 2014-04-23 16:57:51 -0400
 
 ActionController::RoutingError (No route matches [GET] "/stores/assets/jquery.sticky.js"):
@@ -32262,6 +33829,19 @@ Started GET "/assets/product-2.jpg" for 127.0.0.1 at 2014-04-23 16:41:14 -0400
 
 
 Started GET "/assets/product-3.jpg" for 127.0.0.1 at 2014-04-23 16:41:14 -0400
+=======
+
+Started GET "/assets/custom.css" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/assets/animate.css" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/assets/font-awesome/css/font-awesome.min.css" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/stores/assets/bootstrap.min.js" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+>>>>>>> upstream/master
 =======
   /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
@@ -32480,7 +34060,12 @@ Started GET "/assets/scrolltopcontrol.js" for 127.0.0.1 at 2014-04-23 21:42:07 -
 Started GET "/assets/jquery.sticky.js" for 127.0.0.1 at 2014-04-23 21:42:07 -0400
 
 
+<<<<<<< HEAD
 Started GET "/assets/bootstrap.min.js" for 127.0.0.1 at 2014-04-23 21:42:07 -0400
+=======
+Started GET "/stores/assets/bootstrap.min.js" for 127.0.0.1 at 2014-04-23 16:56:58 -0400
+>>>>>>> upstream/master
+>>>>>>> upstream/master
 
 
 Started GET "/assets/custom.js" for 127.0.0.1 at 2014-04-23 21:42:07 -0400
@@ -32509,9 +34094,31 @@ ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.css.ma
   rack (1.5.2) lib/rack/lock.rb:17:in `call'
   rack (1.5.2) lib/rack/content_length.rb:14:in `call'
   rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+=======
+<<<<<<< HEAD
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.6ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (44.7ms)
+
+
+Started GET "/stores/assets/jquery.sticky.js" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+ActionController::RoutingError (No route matches [GET] "/stores/assets/jquery.sticky.js"):
+=======
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+>>>>>>> upstream/master
 
 
   Rendered /Users/genenettles/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
@@ -32522,7 +34129,12 @@ ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.css.ma
 
 Started GET "/assets/bootstrap-theme.css.map" for 127.0.0.1 at 2014-04-23 21:42:07 -0400
 
+<<<<<<< HEAD
 ActionController::RoutingError (No route matches [GET] "/assets/bootstrap-theme.css.map"):
+=======
+ActionController::RoutingError (No route matches [GET] "/stores/assets/scrolltopcontrol.js"):
+>>>>>>> upstream/master
+>>>>>>> upstream/master
   actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
   actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
   railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
@@ -32543,9 +34155,31 @@ ActionController::RoutingError (No route matches [GET] "/assets/bootstrap-theme.
   rack (1.5.2) lib/rack/lock.rb:17:in `call'
   rack (1.5.2) lib/rack/content_length.rb:14:in `call'
   rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+=======
+<<<<<<< HEAD
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.7ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (40.8ms)
+
+
+Started GET "/stores/assets/scrolltopcontrol.js" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+ActionController::RoutingError (No route matches [GET] "/stores/assets/scrolltopcontrol.js"):
+=======
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+>>>>>>> upstream/master
 
 
   Rendered /Users/genenettles/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
@@ -32556,12 +34190,59 @@ ActionController::RoutingError (No route matches [GET] "/assets/bootstrap-theme.
 
 Started GET "/assets/product-2.jpg" for 127.0.0.1 at 2014-04-23 21:42:08 -0400
 
+<<<<<<< HEAD
+=======
+ActionController::RoutingError (No route matches [GET] "/stores/assets/jquery.sticky.js"):
+>>>>>>> upstream/master
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.4ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (45.7ms)
+
+
+Started GET "/stores/assets/custom.js" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+=======
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+>>>>>>> upstream/master
 
 Started GET "/assets/product-1.jpg" for 127.0.0.1 at 2014-04-23 21:42:08 -0400
 
 
 Started GET "/assets/product-3.jpg" for 127.0.0.1 at 2014-04-23 21:42:08 -0400
 
+<<<<<<< HEAD
+=======
+Started GET "/stores/assets/custom.js" for 127.0.0.1 at 2014-04-23 16:56:58 -0400
+>>>>>>> upstream/master
+>>>>>>> upstream/master
 
 Started GET "/assets/font-awesome/fonts/fontawesome-webfont.woff?v=4.0.3" for 127.0.0.1 at 2014-04-23 21:42:08 -0400
 
@@ -32589,9 +34270,343 @@ ActionController::RoutingError (No route matches [GET] "/img/close.png"):
   rack (1.5.2) lib/rack/lock.rb:17:in `call'
   rack (1.5.2) lib/rack/content_length.rb:14:in `call'
   rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+=======
+<<<<<<< HEAD
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.6ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (48.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/assets/custom.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/assets/isotope-custom.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/assets/jquery.countdown.min.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/assets/jquery.countdown.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/assets/jquery.plugin.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/assets/jquery.plugin.min.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/assets/jquery.sticky.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/assets/lightbox-2.6.min.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/assets/scrolltopcontrol.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/assets/stores.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-23 15:55:27 -0400
+
+
+Started GET "/stores/1/products/new" for 127.0.0.1 at 2014-04-23 15:55:36 -0400
+Processing by ProductsController#new as HTML
+  Parameters: {"store_id"=>"1"}
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT  `stores`.* FROM `stores`  WHERE `stores`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 21ms
+
+NameError (uninitialized constant Store::Products):
+  app/controllers/products_controller.rb:13:in `new'
+
+
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.8ms)
+
+
+Started GET "/stores/1/products/new" for 127.0.0.1 at 2014-04-23 15:55:36 -0400
+Processing by ProductsController#new as HTML
+  Parameters: {"store_id"=>"1"}
+  [1m[35mStore Load (0.3ms)[0m  SELECT  `stores`.* FROM `stores`  WHERE `stores`.`id` = 1 LIMIT 1
+Completed 500 Internal Server Error in 3ms
+
+NameError (uninitialized constant Store::Products):
+  app/controllers/products_controller.rb:13:in `new'
+
+
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.5ms)
+
+
+Started GET "/stores/1/products/new" for 127.0.0.1 at 2014-04-23 16:05:51 -0400
+Processing by ProductsController#new as HTML
+  Parameters: {"store_id"=>"1"}
+  [1m[36mStore Load (0.3ms)[0m  [1mSELECT  `stores`.* FROM `stores`  WHERE `stores`.`id` = 1 LIMIT 1[0m
+  Rendered products/_form.html.haml (16.8ms)
+  Rendered products/new.html.haml within layouts/application (19.3ms)
+Completed 200 OK in 85ms (Views: 35.9ms | ActiveRecord: 29.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-04-23 16:05:51 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-04-23 16:05:51 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-23 16:05:51 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-04-23 16:05:51 -0400
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-04-23 16:05:51 -0400
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-04-23 16:05:51 -0400
+
+
+Started GET "/assets/color-styles.css?body=1" for 127.0.0.1 at 2014-04-23 16:05:51 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-04-23 16:05:51 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-04-23 16:05:51 -0400
+
+
+Started GET "/assets/lightbox.css?body=1" for 127.0.0.1 at 2014-04-23 16:05:51 -0400
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-04-23 16:05:51 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-23 16:05:51 -0400
+
+
+Started GET "/assets/stores.css?body=1" for 127.0.0.1 at 2014-04-23 16:05:51 -0400
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2014-04-23 16:05:51 -0400
+
+
+Started GET "/assets/ui-elements.css?body=1" for 127.0.0.1 at 2014-04-23 16:05:51 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-23 16:05:52 -0400
+
+
+Started GET "/assets/bootstrap.css" for 127.0.0.1 at 2014-04-23 16:05:52 -0400
+
+
+Started GET "/assets/color-styles.css" for 127.0.0.1 at 2014-04-23 16:05:52 -0400
+
+
+Started GET "/assets/ui-elements.css" for 127.0.0.1 at 2014-04-23 16:05:52 -0400
+
+
+Started GET "/assets/custom.css" for 127.0.0.1 at 2014-04-23 16:05:52 -0400
+
+
+Started GET "/assets/animate.css" for 127.0.0.1 at 2014-04-23 16:05:52 -0400
+
+
+Started GET "/assets/font-awesome/css/font-awesome.min.css" for 127.0.0.1 at 2014-04-23 16:05:52 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-23 16:05:52 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-23 16:05:52 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-23 16:05:52 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-23 16:05:52 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-23 16:05:52 -0400
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-04-23 16:05:52 -0400
+
+
+Started GET "/assets/custom.js?body=1" for 127.0.0.1 at 2014-04-23 16:05:52 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-04-23 16:05:52 -0400
+
+
+Started GET "/stores/1/products/assets/bootstrap.min.js" for 127.0.0.1 at 2014-04-23 16:05:52 -0400
+
+ActionController::RoutingError (No route matches [GET] "/stores/1/products/assets/bootstrap.min.js"):
+=======
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.7ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.6ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (45.5ms)
+
+
+Started GET "/assets/favicon.png" for 127.0.0.1 at 2014-04-23 16:56:58 -0400
+
+
+Started GET "/stores/1" for 127.0.0.1 at 2014-04-23 16:57:22 -0400
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT  `stores`.* FROM `stores`  WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products`
+  Rendered stores/show.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 20ms (Views: 17.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-04-23 16:57:22 -0400
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-04-23 16:57:22 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-04-23 16:57:22 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-23 16:57:22 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-04-23 16:57:22 -0400
+
+
+Started GET "/assets/color-styles.css?body=1" for 127.0.0.1 at 2014-04-23 16:57:22 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-04-23 16:57:22 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-04-23 16:57:22 -0400
+
+
+Started GET "/assets/lightbox.css?body=1" for 127.0.0.1 at 2014-04-23 16:57:22 -0400
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-04-23 16:57:22 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-23 16:57:22 -0400
+
+
+Started GET "/assets/stores.css?body=1" for 127.0.0.1 at 2014-04-23 16:57:22 -0400
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2014-04-23 16:57:22 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-23 16:57:22 -0400
+
+
+Started GET "/assets/ui-elements.css?body=1" for 127.0.0.1 at 2014-04-23 16:57:22 -0400
+
+
+Started GET "/assets/bootstrap.css" for 127.0.0.1 at 2014-04-23 16:57:22 -0400
+
+
+Started GET "/assets/color-styles.css" for 127.0.0.1 at 2014-04-23 16:57:22 -0400
+
+
+Started GET "/assets/ui-elements.css" for 127.0.0.1 at 2014-04-23 16:57:22 -0400
+
+
+Started GET "/assets/animate.css" for 127.0.0.1 at 2014-04-23 16:57:22 -0400
+
+
+Started GET "/assets/custom.css" for 127.0.0.1 at 2014-04-23 16:57:22 -0400
+
+
+Started GET "/assets/font-awesome/css/font-awesome.min.css" for 127.0.0.1 at 2014-04-23 16:57:22 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-23 16:57:22 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-23 16:57:22 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-23 16:57:22 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-23 16:57:22 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-23 16:57:22 -0400
+
+
+Started GET "/assets/custom.js?body=1" for 127.0.0.1 at 2014-04-23 16:57:22 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-04-23 16:57:22 -0400
+
+
+Started GET "/assets/isotope-custom.js?body=1" for 127.0.0.1 at 2014-04-23 16:57:22 -0400
+
+
+Started GET "/assets/jquery.countdown.js?body=1" for 127.0.0.1 at 2014-04-23 16:57:22 -0400
+
+
+Started GET "/assets/jquery.countdown.min.js?body=1" for 127.0.0.1 at 2014-04-23 16:57:22 -0400
+
+
+Started GET "/assets/jquery.plugin.js?body=1" for 127.0.0.1 at 2014-04-23 16:57:22 -0400
+
+
+Started GET "/assets/jquery.plugin.min.js?body=1" for 127.0.0.1 at 2014-04-23 16:57:22 -0400
+
+
+Started GET "/assets/lightbox-2.6.min.js?body=1" for 127.0.0.1 at 2014-04-23 16:57:22 -0400
+
+
+Started GET "/assets/jquery.sticky.js?body=1" for 127.0.0.1 at 2014-04-23 16:57:22 -0400
+
+>>>>>>> upstream/master
 
 
   Rendered /Users/genenettles/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
@@ -32636,7 +34651,12 @@ ActionController::RoutingError (No route matches [GET] "/img/loading.gif"):
 
 Started GET "/img/prev.png" for 127.0.0.1 at 2014-04-23 21:42:08 -0400
 
+<<<<<<< HEAD
 ActionController::RoutingError (No route matches [GET] "/img/prev.png"):
+=======
+ActionController::RoutingError (No route matches [GET] "/stores/assets/bootstrap.min.js"):
+>>>>>>> upstream/master
+>>>>>>> upstream/master
   actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
   actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
   railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
@@ -32657,9 +34677,31 @@ ActionController::RoutingError (No route matches [GET] "/img/prev.png"):
   rack (1.5.2) lib/rack/lock.rb:17:in `call'
   rack (1.5.2) lib/rack/content_length.rb:14:in `call'
   rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+=======
+<<<<<<< HEAD
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.0ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (61.7ms)
+
+
+Started GET "/stores/1/products/assets/scrolltopcontrol.js" for 127.0.0.1 at 2014-04-23 16:05:52 -0400
+
+ActionController::RoutingError (No route matches [GET] "/stores/1/products/assets/scrolltopcontrol.js"):
+=======
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+>>>>>>> upstream/master
 
 
   Rendered /Users/genenettles/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
@@ -32670,7 +34712,12 @@ ActionController::RoutingError (No route matches [GET] "/img/prev.png"):
 
 Started GET "/img/next.png" for 127.0.0.1 at 2014-04-23 21:42:08 -0400
 
+<<<<<<< HEAD
 ActionController::RoutingError (No route matches [GET] "/img/next.png"):
+=======
+ActionController::RoutingError (No route matches [GET] "/stores/assets/scrolltopcontrol.js"):
+>>>>>>> upstream/master
+>>>>>>> upstream/master
   actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
   actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
   railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
@@ -32691,9 +34738,34 @@ ActionController::RoutingError (No route matches [GET] "/img/next.png"):
   rack (1.5.2) lib/rack/lock.rb:17:in `call'
   rack (1.5.2) lib/rack/content_length.rb:14:in `call'
   rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+=======
+<<<<<<< HEAD
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.6ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (56.9ms)
+
+
+Started GET "/assets/isotope-custom.js?body=1" for 127.0.0.1 at 2014-04-23 16:05:52 -0400
+
+
+Started GET "/stores/1/products/assets/jquery.sticky.js" for 127.0.0.1 at 2014-04-23 16:05:52 -0400
+
+ActionController::RoutingError (No route matches [GET] "/stores/1/products/assets/jquery.sticky.js"):
+=======
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+>>>>>>> upstream/master
 
 
   Rendered /Users/genenettles/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
@@ -32704,6 +34776,7 @@ ActionController::RoutingError (No route matches [GET] "/img/next.png"):
 
 Started GET "/assets/favicon.png" for 127.0.0.1 at 2014-04-23 21:42:08 -0400
 
+<<<<<<< HEAD
 
 Started GET "/admin" for 127.0.0.1 at 2014-04-23 21:42:47 -0400
 Processing by HomeController#admin as HTML
@@ -32727,6 +34800,10 @@ ActionView::Template::Error (undefined local variable or method `store' for #<#<
 Started GET "/products/" for 127.0.0.1 at 2014-04-23 21:44:28 -0400
 
 ActionController::RoutingError (No route matches [GET] "/products"):
+=======
+ActionController::RoutingError (No route matches [GET] "/stores/assets/jquery.sticky.js"):
+>>>>>>> upstream/master
+>>>>>>> upstream/master
   actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
   actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
   railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
@@ -32747,9 +34824,31 @@ ActionController::RoutingError (No route matches [GET] "/products"):
   rack (1.5.2) lib/rack/lock.rb:17:in `call'
   rack (1.5.2) lib/rack/content_length.rb:14:in `call'
   rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+=======
+<<<<<<< HEAD
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.6ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (43.3ms)
+
+
+Started GET "/stores/1/products/assets/custom.js" for 127.0.0.1 at 2014-04-23 16:05:52 -0400
+
+ActionController::RoutingError (No route matches [GET] "/stores/1/products/assets/custom.js"):
+=======
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+>>>>>>> upstream/master
 
 
   Rendered /Users/genenettles/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
@@ -32766,6 +34865,7 @@ Processing by StoresController#show as HTML
   Rendered stores/show.html.haml within layouts/application (25.4ms)
 Completed 200 OK in 44ms (Views: 20.2ms | ActiveRecord: 18.1ms)
 
+<<<<<<< HEAD
 
 Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-04-23 21:44:47 -0400
 
@@ -32785,6 +34885,10 @@ Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-04-23 21:44:47 -0
 Started GET "/stores/assets/jquery.sticky.js" for 127.0.0.1 at 2014-04-23 21:44:47 -0400
 
 ActionController::RoutingError (No route matches [GET] "/stores/assets/jquery.sticky.js"):
+=======
+ActionController::RoutingError (No route matches [GET] "/stores/assets/custom.js"):
+>>>>>>> upstream/master
+>>>>>>> upstream/master
   actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
   actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
   railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
@@ -32805,9 +34909,79 @@ ActionController::RoutingError (No route matches [GET] "/stores/assets/jquery.st
   rack (1.5.2) lib/rack/lock.rb:17:in `call'
   rack (1.5.2) lib/rack/content_length.rb:14:in `call'
   rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+=======
+<<<<<<< HEAD
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.5ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (40.8ms)
+
+
+Started GET "/assets/jquery.countdown.js?body=1" for 127.0.0.1 at 2014-04-23 16:05:52 -0400
+
+
+Started GET "/assets/jquery.countdown.min.js?body=1" for 127.0.0.1 at 2014-04-23 16:05:52 -0400
+
+
+Started GET "/assets/jquery.plugin.js?body=1" for 127.0.0.1 at 2014-04-23 16:05:52 -0400
+
+
+Started GET "/assets/jquery.plugin.min.js?body=1" for 127.0.0.1 at 2014-04-23 16:05:52 -0400
+
+
+Started GET "/assets/jquery.sticky.js?body=1" for 127.0.0.1 at 2014-04-23 16:05:52 -0400
+
+
+Started GET "/assets/lightbox-2.6.min.js?body=1" for 127.0.0.1 at 2014-04-23 16:05:52 -0400
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-04-23 16:05:52 -0400
+
+
+Started GET "/assets/scrolltopcontrol.js?body=1" for 127.0.0.1 at 2014-04-23 16:05:52 -0400
+
+
+Started GET "/assets/stores.js?body=1" for 127.0.0.1 at 2014-04-23 16:05:52 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-23 16:05:52 -0400
+
+
+Started GET "/assets/favicon.png" for 127.0.0.1 at 2014-04-23 16:05:52 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-23 16:28:46 -0400
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.1.0) lib/active_record/migration.rb:389:in `check_pending!'
+  activerecord (4.1.0) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.0) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+=======
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+>>>>>>> upstream/master
 
 
   Rendered /Users/genenettles/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
@@ -33033,6 +35207,7 @@ Started GET "/stores/1/products/assets/bootstrap.min.js" for 127.0.0.1 at 2014-0
 
 ActionController::RoutingError (No route matches [GET] "/stores/1/products/assets/bootstrap.min.js"):
   actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+>>>>>>> upstream/master
   actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
   railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
   railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
@@ -33052,9 +35227,46 @@ ActionController::RoutingError (No route matches [GET] "/stores/1/products/asset
   rack (1.5.2) lib/rack/lock.rb:17:in `call'
   rack (1.5.2) lib/rack/content_length.rb:14:in `call'
   rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+=======
+<<<<<<< HEAD
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-23 16:28:53 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.1.0) lib/active_record/migration.rb:389:in `check_pending!'
+  activerecord (4.1.0) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.0) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+=======
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+>>>>>>> upstream/master
 
 
   Rendered /Users/genenettles/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
@@ -33067,6 +35279,7 @@ Started GET "/stores/1/products/assets/scrolltopcontrol.js" for 127.0.0.1 at 201
 
 ActionController::RoutingError (No route matches [GET] "/stores/1/products/assets/scrolltopcontrol.js"):
   actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+>>>>>>> upstream/master
   actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
   railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
   railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
@@ -33086,9 +35299,192 @@ ActionController::RoutingError (No route matches [GET] "/stores/1/products/asset
   rack (1.5.2) lib/rack/lock.rb:17:in `call'
   rack (1.5.2) lib/rack/content_length.rb:14:in `call'
   rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+=======
+<<<<<<< HEAD
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateCheckouts (20140423200920)
+  [1m[35m (19.2ms)[0m  CREATE TABLE `checkouts` (`id` int(11) auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140423200920')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-23 16:29:11 -0400
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-04-23 16:29:11 -0400
+
+
+Started GET "/assets/animate.css?body=1" for 127.0.0.1 at 2014-04-23 16:29:11 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-04-23 16:29:11 -0400
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-04-23 16:29:11 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-04-23 16:29:11 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-23 16:29:11 -0400
+
+
+Started GET "/assets/color-styles.css?body=1" for 127.0.0.1 at 2014-04-23 16:29:11 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-04-23 16:29:11 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-04-23 16:29:11 -0400
+
+
+Started GET "/assets/lightbox.css?body=1" for 127.0.0.1 at 2014-04-23 16:29:11 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-23 16:29:11 -0400
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-04-23 16:29:11 -0400
+
+
+Started GET "/assets/stores.css?body=1" for 127.0.0.1 at 2014-04-23 16:29:11 -0400
+
+
+Started GET "/assets/ui-elements.css?body=1" for 127.0.0.1 at 2014-04-23 16:29:11 -0400
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2014-04-23 16:29:11 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-23 16:29:11 -0400
+
+
+Started GET "/assets/bootstrap.css" for 127.0.0.1 at 2014-04-23 16:29:11 -0400
+
+
+Started GET "/assets/color-styles.css" for 127.0.0.1 at 2014-04-23 16:29:11 -0400
+
+
+Started GET "/assets/ui-elements.css" for 127.0.0.1 at 2014-04-23 16:29:11 -0400
+
+
+Started GET "/assets/custom.css" for 127.0.0.1 at 2014-04-23 16:29:11 -0400
+
+
+Started GET "/assets/animate.css" for 127.0.0.1 at 2014-04-23 16:29:11 -0400
+
+
+Started GET "/assets/font-awesome/css/font-awesome.min.css" for 127.0.0.1 at 2014-04-23 16:29:11 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-23 16:29:11 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-23 16:29:11 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-23 16:29:11 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-23 16:29:11 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-23 16:29:11 -0400
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-04-23 16:29:11 -0400
+
+
+Started GET "/assets/custom.js?body=1" for 127.0.0.1 at 2014-04-23 16:29:11 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-04-23 16:29:11 -0400
+
+
+Started GET "/assets/isotope-custom.js?body=1" for 127.0.0.1 at 2014-04-23 16:29:11 -0400
+
+
+Started GET "/assets/jquery.countdown.js?body=1" for 127.0.0.1 at 2014-04-23 16:29:11 -0400
+
+
+Started GET "/assets/jquery.countdown.min.js?body=1" for 127.0.0.1 at 2014-04-23 16:29:12 -0400
+
+
+Started GET "/assets/jquery.plugin.js?body=1" for 127.0.0.1 at 2014-04-23 16:29:12 -0400
+
+
+Started GET "/assets/jquery.plugin.min.js?body=1" for 127.0.0.1 at 2014-04-23 16:29:12 -0400
+
+
+Started GET "/assets/jquery.sticky.js?body=1" for 127.0.0.1 at 2014-04-23 16:29:12 -0400
+
+
+Started GET "/assets/lightbox-2.6.min.js?body=1" for 127.0.0.1 at 2014-04-23 16:29:12 -0400
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-04-23 16:29:12 -0400
+
+
+Started GET "/assets/scrolltopcontrol.js?body=1" for 127.0.0.1 at 2014-04-23 16:29:12 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-23 16:29:12 -0400
+
+
+Started GET "/assets/bootstrap.min.js" for 127.0.0.1 at 2014-04-23 16:29:12 -0400
+
+
+Started GET "/assets/scrolltopcontrol.js" for 127.0.0.1 at 2014-04-23 16:29:12 -0400
+
+
+Started GET "/assets/jquery.sticky.js" for 127.0.0.1 at 2014-04-23 16:29:12 -0400
+
+
+Started GET "/assets/custom.js" for 127.0.0.1 at 2014-04-23 16:29:12 -0400
+
+
+Started GET "/assets/stores.js?body=1" for 127.0.0.1 at 2014-04-23 16:29:12 -0400
+
+
+Started GET "/assets/product-1.jpg" for 127.0.0.1 at 2014-04-23 16:29:12 -0400
+
+
+Started GET "/assets/product-2.jpg" for 127.0.0.1 at 2014-04-23 16:29:12 -0400
+
+
+Started GET "/assets/product-3.jpg" for 127.0.0.1 at 2014-04-23 16:29:12 -0400
+
+
+Started GET "/assets/font-awesome/fonts/fontawesome-webfont.woff?v=4.0.3" for 127.0.0.1 at 2014-04-23 16:29:12 -0400
+
+
+Started GET "/img/close.png" for 127.0.0.1 at 2014-04-23 16:29:12 -0400
+
+ActionController::RoutingError (No route matches [GET] "/img/close.png"):
+=======
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+>>>>>>> upstream/master
 
 
   Rendered /Users/genenettles/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
@@ -33263,7 +35659,12 @@ Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-23 21:45:22 -
 
 Started GET "/stores/assets/jquery.sticky.js" for 127.0.0.1 at 2014-04-23 21:45:22 -0400
 
+<<<<<<< HEAD
 ActionController::RoutingError (No route matches [GET] "/stores/assets/jquery.sticky.js"):
+=======
+ActionController::RoutingError (No route matches [GET] "/stores/assets/scrolltopcontrol.js"):
+>>>>>>> upstream/master
+>>>>>>> upstream/master
   actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
   actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
   railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
@@ -33284,9 +35685,31 @@ ActionController::RoutingError (No route matches [GET] "/stores/assets/jquery.st
   rack (1.5.2) lib/rack/lock.rb:17:in `call'
   rack (1.5.2) lib/rack/content_length.rb:14:in `call'
   rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+=======
+<<<<<<< HEAD
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.8ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.5ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (62.4ms)
+
+
+Started GET "/img/loading.gif" for 127.0.0.1 at 2014-04-23 16:29:12 -0400
+
+ActionController::RoutingError (No route matches [GET] "/img/loading.gif"):
+=======
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+>>>>>>> upstream/master
 
 
   Rendered /Users/genenettles/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
@@ -33297,7 +35720,12 @@ ActionController::RoutingError (No route matches [GET] "/stores/assets/jquery.st
 
 Started GET "/stores/assets/custom.js" for 127.0.0.1 at 2014-04-23 21:45:22 -0400
 
+<<<<<<< HEAD
 ActionController::RoutingError (No route matches [GET] "/stores/assets/custom.js"):
+=======
+ActionController::RoutingError (No route matches [GET] "/stores/assets/bootstrap.min.js"):
+>>>>>>> upstream/master
+>>>>>>> upstream/master
   actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
   actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
   railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
@@ -33318,9 +35746,31 @@ ActionController::RoutingError (No route matches [GET] "/stores/assets/custom.js
   rack (1.5.2) lib/rack/lock.rb:17:in `call'
   rack (1.5.2) lib/rack/content_length.rb:14:in `call'
   rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+=======
+<<<<<<< HEAD
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.8ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (9.3ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (76.0ms)
+
+
+Started GET "/img/prev.png" for 127.0.0.1 at 2014-04-23 16:29:12 -0400
+
+ActionController::RoutingError (No route matches [GET] "/img/prev.png"):
+=======
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+>>>>>>> upstream/master
 
 
   Rendered /Users/genenettles/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
@@ -33331,6 +35781,7 @@ ActionController::RoutingError (No route matches [GET] "/stores/assets/custom.js
 
 Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-23 21:45:22 -0400
 
+<<<<<<< HEAD
 
 Started GET "/assets/custom.js?body=1" for 127.0.0.1 at 2014-04-23 21:45:22 -0400
 
@@ -33374,6 +35825,10 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-23 21:45:22
 Started GET "/stores/assets/bootstrap.min.js" for 127.0.0.1 at 2014-04-23 21:45:22 -0400
 
 ActionController::RoutingError (No route matches [GET] "/stores/assets/bootstrap.min.js"):
+=======
+ActionController::RoutingError (No route matches [GET] "/stores/assets/jquery.sticky.js"):
+>>>>>>> upstream/master
+>>>>>>> upstream/master
   actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
   actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
   railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
@@ -33394,9 +35849,31 @@ ActionController::RoutingError (No route matches [GET] "/stores/assets/bootstrap
   rack (1.5.2) lib/rack/lock.rb:17:in `call'
   rack (1.5.2) lib/rack/content_length.rb:14:in `call'
   rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+=======
+<<<<<<< HEAD
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.8ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (52.7ms)
+
+
+Started GET "/img/next.png" for 127.0.0.1 at 2014-04-23 16:29:12 -0400
+
+ActionController::RoutingError (No route matches [GET] "/img/next.png"):
+=======
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+>>>>>>> upstream/master
 
 
   Rendered /Users/genenettles/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
@@ -33407,7 +35884,12 @@ ActionController::RoutingError (No route matches [GET] "/stores/assets/bootstrap
 
 Started GET "/stores/assets/scrolltopcontrol.js" for 127.0.0.1 at 2014-04-23 21:45:22 -0400
 
+<<<<<<< HEAD
 ActionController::RoutingError (No route matches [GET] "/stores/assets/scrolltopcontrol.js"):
+=======
+ActionController::RoutingError (No route matches [GET] "/stores/assets/custom.js"):
+>>>>>>> upstream/master
+>>>>>>> upstream/master
   actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
   actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
   railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
@@ -33428,6 +35910,7 @@ ActionController::RoutingError (No route matches [GET] "/stores/assets/scrolltop
   rack (1.5.2) lib/rack/lock.rb:17:in `call'
   rack (1.5.2) lib/rack/content_length.rb:14:in `call'
   rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+<<<<<<< HEAD
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
   /Users/genenettles/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
@@ -33437,3 +35920,119 @@ ActionController::RoutingError (No route matches [GET] "/stores/assets/scrolltop
   Rendered /Users/genenettles/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (9.3ms)
   Rendered /Users/genenettles/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
   Rendered /Users/genenettles/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (34.4ms)
+=======
+<<<<<<< HEAD
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/richsalvucci/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.9ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/richsalvucci/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (64.1ms)
+
+
+Started GET "/assets/favicon.png" for 127.0.0.1 at 2014-04-23 16:29:12 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+Migrating to CreateCheckouts (20140423200920)
+  [1m[36m (3.7ms)[0m  [1mDROP TABLE `checkouts`[0m
+  [1m[35mSQL (28.9ms)[0m  DELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20140423200920'
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateCheckouts (20140423200920)
+  [1m[35m (18.3ms)[0m  CREATE TABLE `checkouts` (`id` int(11) auto_increment PRIMARY KEY, `product_id` int(11), `store_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140423200920')
+  [1m[36m (17.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+=======
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/prestonbernstein/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.8ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (41.2ms)
+
+
+Started GET "/assets/favicon.png" for 127.0.0.1 at 2014-04-23 16:57:51 -0400
+
+
+Started GET "/stores/1" for 127.0.0.1 at 2014-04-23 16:58:17 -0400
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT  `stores`.* FROM `stores`  WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products`
+  Rendered stores/show.html.haml within layouts/application (16.1ms)
+Completed 500 Internal Server Error in 20ms
+
+ActionView::Template::Error (undefined local variable or method `store' for #<#<Class:0x000001036bf608>:0x0000010260c090>):
+    25:   %strong Price: 
+    26:   = product.price
+    27:   %br
+    28:   = link_to "Edit", edit_product_path(store)
+    29:   / |
+    30:   / = link_to "Delete", store_path(store), method: :delete
+  app/views/stores/show.html.haml:28:in `block in _app_views_stores_show_html_haml___118466738179516058_2167420020'
+  app/views/stores/show.html.haml:14:in `_app_views_stores_show_html_haml___118466738179516058_2167420020'
+
+
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.3ms)
+
+
+Started GET "/stores/1" for 127.0.0.1 at 2014-04-23 16:58:25 -0400
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.2ms)[0m  [1mSELECT  `stores`.* FROM `stores`  WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT `products`.* FROM `products`
+  Rendered stores/show.html.haml within layouts/application (16.4ms)
+Completed 500 Internal Server Error in 20ms
+
+ActionView::Template::Error (undefined method `edit_product_path' for #<#<Class:0x000001036bf608>:0x00000102772e70>):
+    25:   %strong Price: 
+    26:   = product.price
+    27:   %br
+    28:   = link_to "Edit", edit_product_path(product)
+    29:   / |
+    30:   / = link_to "Delete", store_path(store), method: :delete
+  app/views/stores/show.html.haml:28:in `block in _app_views_stores_show_html_haml___118466738179516058_2168163360'
+  app/views/stores/show.html.haml:14:in `_app_views_stores_show_html_haml___118466738179516058_2168163360'
+
+
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.9ms)
+
+
+Started GET "/stores/1" for 127.0.0.1 at 2014-04-23 16:58:48 -0400
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.8ms)[0m  [1mSELECT  `stores`.* FROM `stores`  WHERE `stores`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT `products`.* FROM `products`
+  Rendered stores/show.html.haml within layouts/application (17.2ms)
+Completed 500 Internal Server Error in 23ms
+
+ActionView::Template::Error (undefined local variable or method `store' for #<#<Class:0x000001036bf608>:0x00000108fb4970>):
+    25:   %strong Price: 
+    26:   = product.price
+    27:   %br
+    28:   = link_to "Edit", edit_store_product_path(store)
+    29:   / |
+    30:   / = link_to "Delete", store_path(store), method: :delete
+  app/views/stores/show.html.haml:28:in `block in _app_views_stores_show_html_haml___118466738179516058_2222815800'
+  app/views/stores/show.html.haml:14:in `_app_views_stores_show_html_haml___118466738179516058_2222815800'
+
+
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/prestonbernstein/.rvm/gems/ruby-2.1.1@store/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.6ms)
+>>>>>>> upstream/master
+>>>>>>> upstream/master
