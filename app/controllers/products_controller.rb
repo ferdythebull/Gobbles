@@ -40,7 +40,11 @@ class ProductsController < ApplicationController
     end
 
     def find_product
+<<<<<<< HEAD
+      @product = @store.products.find params[:product_id]
+=======
       @product = Product.find params[:id]
+>>>>>>> upstream/master
     end
 
     def product_params

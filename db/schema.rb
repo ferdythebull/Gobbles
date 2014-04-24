@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20140424174657) do
+=======
+ActiveRecord::Schema.define(version: 20140424175307) do
+>>>>>>> upstream/master
 
   create_table "carts", force: true do |t|
     t.integer  "product_id"
