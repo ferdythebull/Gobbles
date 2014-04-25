@@ -41,7 +41,6 @@ class ProductsController < ApplicationController
 
     def find_product
       @product = @store.products.find params[:id]
-
     end
 
     def product_params
