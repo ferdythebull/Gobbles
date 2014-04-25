@@ -34,6 +34,10 @@ class ProductsController < ApplicationController
     redirect_to store_path(@store)
   end
 
+  def add_to_cart
+    cart.create({:product_id:params[:id]})
+  end
+
   private
     def find_store
       @store = Store.find params[:store_id]
