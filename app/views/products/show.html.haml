@@ -9,10 +9,11 @@
         .col-sm-8
           %ol.breadcrumb.pull-right.hidden-xs
             %li
-              %a{:href => "/"} Home
+              = link_to "Cart", add_to_cart_store_product_path(@store,@product), method: :patch
             %li
-              / = link_to
-              %a{:href => "/stores/#{@store.id}"} Shop
+              = link_to "Home", root_path
+            %li
+              = link_to "Shop", store_path(@store)
             %li.active Item
   .container.shop-item
     .row
@@ -49,7 +50,7 @@
                 %i.fa.fa-star
             %span.text-muted.reviews (12 reviews)
             %p.text-muted
-              = @product.description
+              
             .price-block
               %span.price $
               = @product.price

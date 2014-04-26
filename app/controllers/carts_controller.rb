@@ -1,5 +1,4 @@
 class CartsController < ApplicationController
-  before_filter :find_store
   # before_filter :find_product
   before_filter :find_cart, only: [:show, :edit, :update, :destroy]
 

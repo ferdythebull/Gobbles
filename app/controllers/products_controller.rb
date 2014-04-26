@@ -34,6 +34,17 @@ class ProductsController < ApplicationController
     redirect_to store_path(@store)
   end
 
+<<<<<<< HEAD
+  def add_to_cart
+    current_user.carts.create({product_id: params[:id]})
+    redirect_to store_path(@store)
+  end
+
+private
+  def find_store
+    @store = Store.find params[:store_id]
+  end
+=======
   private
     def find_store
       @store = Store.find params[:store_id]
@@ -42,9 +53,13 @@ class ProductsController < ApplicationController
     def find_product
       @product = @store.products.find params[:id]
     end
+>>>>>>> upstream/master
 
-    def product_params
-      params.require(:product).permit(:name, :description, :price)
-    end
+  def find_product
+    @product = @store.products.find params[:id]
+  end
 
+  def product_params
+    params.require(:product).permit(:name, :description, :price)
+  end
 end
