@@ -1,0 +1,50 @@
+/ Wrapper
+.wrapper
+  / Topic Header
+  .topic
+    .container
+      .row
+        .col-sm-4
+          %h3.primary-font Shopping Cart
+        .col-sm-8
+          %ol.breadcrumb.pull-right.hidden-xs
+            %li
+              %a{:href => "index.html"} Home
+            %li
+              %a{:href => "shop.html"} Shop
+            %li.active Cart
+  .container.shopping-cart
+    .row
+      - current_user.products.each do |product|
+        .col-sm-12
+          %table.table.table-bordered
+            %thead
+              %tr
+                %th Products
+                %th Price
+                %th Quantity
+            %tbody
+              %tr
+                %td
+                  %img.img-responsive{:alt => "...", :src => "img/product-1.jpg"}
+                    .item
+                      = product.name
+                      %p.text-muted
+                      = product.description
+                %td
+                  =product.price
+                %td
+                  %input.form-control{:name => "pcs", :type => "number", :value => "1"}/
+
+      %ul.text-right.checkout
+        %li
+          %strong> Total Price
+          \: $599
+        %li
+          %strong> Shipping
+          \: Free
+        %li
+          %a.btn.btn-color.btn{:href => "#"} Proceed to checkout
+      / / .row
+    / / .container
+/ / .wrapper

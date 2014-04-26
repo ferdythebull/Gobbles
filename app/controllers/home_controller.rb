@@ -5,6 +5,7 @@ class HomeController < ApplicationController
   end
   def admin
     @stores = Store.all
-    @products = Product.all 
+    @products = Product.all
+    @cart = Cart.all
   end  
 end
