@@ -35,7 +35,7 @@ class ProductsController < ApplicationController
   end
 
   def add_to_cart
-    cart.create({:product_id:params[:id]})
+    current_user.carts.create({:product_id :params[:id]})
   end
 
   private
