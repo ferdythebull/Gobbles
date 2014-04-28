@@ -11,16 +11,15 @@
       - @products.each do |product|
         .col-sm-4
           .shop-product
-            %a{href: "/stores/1/products/1"}
-              %img.img-responsive{alt: "...", src: "/assets/product-1.jpg"}/
-            %a{href: "/stores/1/products/1"}
+            = link_to store_product_path(@store,product) do 
+              %img.img-responsive{alt: "Product", src: "/assets/product-1.jpg"}/
               %h5.primary-font
-              = product.name
-            %p
-              = product.price
-            %a.btn.btn-sm.btn-color{href: "/stores/1/products/1"}
-              Product Details
-            %br
+                = product.name
+              %p
+                = product.price
+              %btn.btn-sm.btn-color
+                Product Details
+              %br
     / / .row
   / / .container
 / / .wrapper

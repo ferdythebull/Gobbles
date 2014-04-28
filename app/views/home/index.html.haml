@@ -8,7 +8,9 @@
           %h1.text-center The Gobbles Shop
           %h3.primary-font.text-center Created by Gene Nettles, Richard Salvucci, and Preston Bernstein
           %form.form-inline.text-center{role: "form"}
-            %a.btn.btn-color.btn-lg{href: "/stores/1"} Browse Now!
+            - @stores.each do |store|
+              = link_to store_path(store) do
+                %btn.btn-color.btn-lg Browse Now!
       / / .row
     / / .container
   / / .color-jumbotron

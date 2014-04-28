@@ -9,8 +9,6 @@
         .col-sm-8
           %ol.breadcrumb.pull-right.hidden-xs
             %li
-              = link_to "Cart", add_to_cart_store_product_path(@store,@product), method: :patch
-            %li
               = link_to "Home", root_path
             %li
               = link_to "Shop", store_path(@store)
