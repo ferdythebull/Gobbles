@@ -13,7 +13,12 @@ class User < ActiveRecord::Base
   def create_cart
     @cart = Cart.create 
   end
+
+  def total
+    :products.sum(&:price)
+  end
 private
+
   # def cart_params
   #   params.require(:product).permit({cart_ids: []})
   # end
