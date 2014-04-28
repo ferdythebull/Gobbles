@@ -39,15 +39,15 @@
       %span.phone
         %i.fa.fa-phone-square
         Phone: 843-123-4567
-      %a.pull-right{href: "sign_up.html"}
-        %i.fa.fa-arrow-circle-down
-        Sign Up
-      %a.pull-right{href: "sign_up.html"}
-        %i.fa.fa-sign-in
-        Sign In
-      %a#nav-search.pull-right{href: "#"}
-        %i.fa.fa-search
-        Search
+      / %a.pull-right{href: "sign_up.html"}
+      /   %i.fa.fa-arrow-circle-down
+      /   Sign Up
+      / %a.pull-right{href: "sign_up.html"}
+      /   %i.fa.fa-sign-in
+      /   Sign In
+      / %a#nav-search.pull-right{href: "#"}
+      /   %i.fa.fa-search
+      /   Search
       %a#nav-search-close.pull-right.hidden{href: "#"}
         %i.fa.fa-times
       / Search Form
@@ -84,11 +84,9 @@
             %li
               %a.bg-hover-color{href: "shop-products.html"} Shop Products
             %li
-              %a.bg-hover-color{href: "shop-item.html"} Shop Item
-            %li
               = link_to "Cart", carts_path
             %li
-              %a.bg-hover-color{href: "user-profile.html"} User Profile
+              / %a.bg-hover-color{href: "user-profile.html"} User Profile
       / Search Form (xs)
       %form.navbar-form.navbar-left.visible-xs{role: "search"}
         .form-group
@@ -151,22 +149,22 @@
                 %i.fa.fa-google-plus
           .clearfix
       / Subscribe
-      .col-sm-4
-        %h3.text-color
-          %span Subscribe
-        .content
-          %p
-            Enter your e-mail below to subscribe to our free newsletter.
-            %br>/
-            We promise not to bother you often!
-          %form.form{role: "form"}
-            .row
-              .col-sm-8
-                .input-group
-                  %label.sr-only{for: "subscribe-email"} Email address
-                  %input#subscribe-email.form-control{placeholder: "Enter email", type: "email"}/
-                  %span.input-group-btn
-                    %button.btn.btn-default{type: "submit"} OK
+      / .col-sm-4
+      /   %h3.text-color
+      /     %span Subscribe
+      /   .content
+      /     %p
+      /       Enter your e-mail below to subscribe to our free newsletter.
+      /       %br>/
+      /       We promise not to bother you often!
+      /     %form.form{role: "form"}
+      /       .row
+      /         .col-sm-8
+      /           .input-group
+      /             %label.sr-only{for: "subscribe-email"} Email address
+      /             %input#subscribe-email.form-control{placeholder: "Enter email", type: "email"}/
+      /             %span.input-group-btn
+      /               %button.btn.btn-default{type: "submit"} OK
     .row
       .col-sm-12
         %hr/
@@ -175,10 +173,7 @@
       .col-sm-12
         %p
           \© Team Gobbles 2014.
-          %a{href: "#"} Privacy Policy
-          |
-          %a{href: "#"} Terms of Service
-
+          
 / Placed at the end of the document so the pages load faster
 %script{src: "https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"}
 %script{src: "assets/bootstrap.min.js"}
