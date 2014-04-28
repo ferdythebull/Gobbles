@@ -35,11 +35,11 @@
                   =product.price
                 %td
                   %input.form-control{:name => "pcs", :type => "number", :value => "1"}/
-
+          = link_to "Delete Item", cart_path(product), method: :delete
       %ul.text-right.checkout
         %li
           %strong> Total Price
-          \: =@user.total
+          \: $75
         %li
           %strong> Shipping
           \: Free
