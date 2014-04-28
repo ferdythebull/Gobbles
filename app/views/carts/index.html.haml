@@ -9,9 +9,9 @@
         .col-sm-8
           %ol.breadcrumb.pull-right.hidden-xs
             %li
-              %a{:href => "/"} Home
+              = link_to "Home", root_path
             %li
-              %a{:href => "/stores/1"} Shop
+              = link_to "Shop", store_path(@store)
             %li.active Cart
   .container.shopping-cart
     .row
