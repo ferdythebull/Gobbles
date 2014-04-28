@@ -58,7 +58,7 @@
             %br/
             %a.btn.btn-color{:href => "#"}
               %i.fa.fa-shopping-cart
-              Add to cart
+              = link_to " Add to Cart", add_to_cart_store_product_path(@store,@product), method: :patch
         / Item Description
         .row
           .col-sm-12
