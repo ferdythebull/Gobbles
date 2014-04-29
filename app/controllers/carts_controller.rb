@@ -1,6 +1,7 @@
 class CartsController < ApplicationController
   # before_filter :find_product
-  before_filter :find_cart, only: [:show, :edit, :update, :destroy]
+  before_filter :find_cart, only: [ :show, :edit, :update]
+  before_filter :find_cart, only: [ :show, :edit, :update]
 
   def index
   end
@@ -26,8 +27,11 @@ class CartsController < ApplicationController
   end  
 
   def destroy
-  @cart = @store.carts.delete
-  redirect_to store_path(@store) 
+  @cart = current_user.carts.find_by_product_id(params[:id])
+  puts "heres the cart before delete"
+  puts @cart
+  @cart.delete
+  redirect_to carts_path 
   end
 
 private
@@ -41,9 +45,10 @@ private
 
   def find_product
     @product = @store.products.find params[:product_id]
+    puts "the product id is"+ @product
   end
 
   def cart_params
-    params.require(:product).permit({checkout_ids: []})
+    params.require(:product).permit({user_ids: []})
   end
 end
