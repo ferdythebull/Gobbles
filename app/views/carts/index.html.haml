@@ -9,9 +9,9 @@
         .col-sm-8
           %ol.breadcrumb.pull-right.hidden-xs
             %li
-              %a{:href => "/"} Home
+              = link_to "Home", root_path
             %li
-              %a{:href => "/stores/1"} Shop
+              = link_to "Shop", store_path(@store)
             %li.active Cart
   .container.shopping-cart
     .row
@@ -35,11 +35,11 @@
                   =product.price
                 %td
                   %input.form-control{:name => "pcs", :type => "number", :value => "1"}/
-
+          = link_to "Delete Item", cart_path(product), method: :delete
       %ul.text-right.checkout
         %li
           %strong> Total Price
-          \: =@user.total
+          \: $75
         %li
           %strong> Shipping
           \: Free
